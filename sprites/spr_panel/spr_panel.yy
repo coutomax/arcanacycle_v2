@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"Panels",
-    "path":"folders/assets/Ui/Panels.yy",
+    "path":"folders/Assets/UI/Panels.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

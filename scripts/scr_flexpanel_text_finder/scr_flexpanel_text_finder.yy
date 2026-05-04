@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_flexpanel_text_finder",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_flexpanel_text_finder",
+  "parent":{
+    "name":"UI_controllers",
+    "path":"folders/Scripts/UI_controllers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
