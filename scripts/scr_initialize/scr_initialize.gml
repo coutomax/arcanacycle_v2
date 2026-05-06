@@ -5,7 +5,10 @@
 */
 
 //booleanos
+global.new_game			= true;
 global.paused			= false;
+global.in_game			= false;
 
-//ui controller
-global.active_ui		= "";
+//numerics
+global.gravity			= .25;
+global.max_gravity		= 8;

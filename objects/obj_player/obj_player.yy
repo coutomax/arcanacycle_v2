@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_game",
+  "%Name":"obj_player",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":27,"eventType":10,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_game",
+  "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Game_Controller",
-    "path":"folders/Objects/Game_Controller.yy",
+    "name":"Game_Components",
+    "path":"folders/Objects/Game_Components.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -31,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_stopped_player",
+    "path":"sprites/spr_stopped_player/spr_stopped_player.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

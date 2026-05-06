@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_jump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_jump",
+  "parent":{
+    "name":"Character_movement",
+    "path":"folders/Scripts/General_Controllers/Character_movement.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

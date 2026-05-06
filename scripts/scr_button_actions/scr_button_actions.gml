@@ -16,13 +16,16 @@ function scr_button_actions(obj, actions){
 			switch (action)
 			{
 				case	"new_game":
-		
+					layer_set_visible("ui_start_menu", false);
+					room_goto(0);
+					global.in_game		= true;
 				break;		
+				
 				case	"settings":
 		
-				break;		
+				break;	
+				
 				case	"exit":
-					global.active_ui	= "ui_yes_no_menu_option";
 					
 					if (obj_layer != noone)
 					{
@@ -30,15 +33,22 @@ function scr_button_actions(obj, actions){
 						layer_set_visible("ui_yes_no_menu_option", true);
 					}
 				break;
+				
 				case	"yes_option":
 					game_end();
 				break;
+				
 				case	"no_option":
 					if (obj_layer != noone)
 					{
 						layer_set_visible(obj_layer, false);
 						layer_set_visible("ui_start_menu", true);
 					}
+				break;
+				
+				case "resume":
+					layer_set_visible("ui_pause_menu", false);
+					global.paused = false;
 				break;
 			}
 		}
