@@ -4,13 +4,14 @@ function scr_ground_collision(inst, obstacle)
 	{
 		if (place_meeting(x, y + yspd, obstacle))
 		{
-			var _pixel_check	= sign(yspd);
-			while (!place_meeting(x + xspd, y + _pixel_check, obstacle))
+			var _y_pixel_check	= sign(yspd);
+						
+			while (!place_meeting(x, y + _y_pixel_check, obstacle))
 			{
-				y			+= _pixel_check;	
+				y			+= _y_pixel_check;
 			}
-			at_ground	= true;
-			yspd		= 0;
+			at_ground		= true;
+			yspd			= 0;
 		}
 	}
 }

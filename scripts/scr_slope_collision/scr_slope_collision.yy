@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_slope_collision",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_slope_collision",
+  "parent":{
+    "name":"Colisions",
+    "path":"folders/Scripts/General_Controllers/Colisions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

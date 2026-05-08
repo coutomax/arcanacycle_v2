@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"TESTE",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"TESTE",
+  "parent":{
+    "name":"Colisions",
+    "path":"folders/Scripts/General_Controllers/Colisions.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -60,8 +60,14 @@ function scr_player_movement()
 			*
 			*/
 			
+			
+			
+			//scr_ramp_climber(object, obj_ramp);
 			//colisão em y
-			scr_ground_collision(object, obj_ground);
+						
+			scr_wall_collision(object, obj_test);
+			scr_ground_collision(object, obj_test);
+			
 			
 			object.x			+= object.xspd;
 			object.y			+= object.yspd;			
