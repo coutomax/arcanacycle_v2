@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_wall",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_wall",
   "overriddenProperties":[],
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blank_obstacle",
-    "path":"sprites/spr_blank_obstacle/spr_blank_obstacle.yy",
+    "name":"spr_test",
+    "path":"sprites/spr_test/spr_test.yy",
   },
   "spriteMaskId":null,
   "visible":true,
