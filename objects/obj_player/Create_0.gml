@@ -1,7 +1,7 @@
 depth				= 1;
 xspd				= 0;
 yspd				= 0;
-walk_speed			= 2;
+walk_speed			= 2.5;
 
 at_ground			= false;	
 

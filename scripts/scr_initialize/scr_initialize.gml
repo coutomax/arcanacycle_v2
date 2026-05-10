@@ -14,5 +14,13 @@ global.gravity			= .25;
 global.max_gravity		= 8;
 global.max_life			= 100;
 global.life				= 100;
+global.wave				= 1;
+global.enemies			= 1;
+global.max_enemies		= 1;
+
+//multiplicadores
+global.life_multiplier			= 1;
+global.enemy_life_multiplier	= 1;
+
 
 

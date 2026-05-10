@@ -14,8 +14,8 @@
   "name":"obj_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI_controllers",
-    "path":"folders/Objects/UI_controllers.yy",
+    "name":"UI_Controllers",
+    "path":"folders/Objects/UI_Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
