@@ -9,5 +9,4 @@ if (global.paused)
 image_speed			= 1;
 
 movimento();
-
 scr_jump(self);

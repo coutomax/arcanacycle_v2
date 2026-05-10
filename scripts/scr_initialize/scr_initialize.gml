@@ -12,3 +12,7 @@ global.in_game			= false;
 //numerics
 global.gravity			= .25;
 global.max_gravity		= 8;
+global.max_life			= 100;
+global.life				= 100;
+
+

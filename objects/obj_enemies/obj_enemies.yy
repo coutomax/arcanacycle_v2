@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform",
-  "eventList":[],
+  "%Name":"obj_enemies",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_platform",
+  "name":"obj_enemies",
   "overriddenProperties":[],
   "parent":{
-    "name":"Obstacles",
-    "path":"folders/Objects/Game_Components/Obstacles.yy",
+    "name":"Enemies",
+    "path":"folders/Objects/Game_Components/Enemies.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_blank_obstacle",
-    "path":"sprites/spr_blank_obstacle/spr_blank_obstacle.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

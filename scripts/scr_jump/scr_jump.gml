@@ -8,7 +8,7 @@ function scr_jump(object){
 	var _space_hold			= keyboard_check( vk_space );
 	var _space_pressed		= keyboard_check_pressed( vk_space );
 			
-	if (place_meeting(object.x, object.y + 1, obj_wall) || place_meeting(object.x, object.y + 1, obj_platform))
+	if (place_meeting(object.x, object.y + 1, obj_wall))
 			{
 				object.jump_count		= 0;
 			}

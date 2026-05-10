@@ -1,0 +1,11 @@
+/*
+*
+*
+*						IDEIAS PARA USAR NO JOGO
+*						  (IMPLEMENTAR OU NÃO)
+*
+*/
+
+1 - Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+
+2 -
