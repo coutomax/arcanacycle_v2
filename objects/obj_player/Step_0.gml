@@ -8,5 +8,12 @@ if (global.paused)
 
 image_speed			= 1;
 
-movimento();
-scr_jump(self);
+if (global.life > 0)
+{
+	movimento();
+	scr_jump(self);
+}
+else
+{
+	sprite_index	= spr_dead_player;
+}
