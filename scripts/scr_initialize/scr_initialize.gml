@@ -4,6 +4,9 @@
 
 */
 
+//arrays
+global.objects_list		= []; //lista de objetos para serem deletados
+
 //booleanos
 global.new_game			= true;
 global.paused			= false;
@@ -48,6 +51,3 @@ global.enemy_speed_multiplier	= 1;
 global.enemy_exp_multiplier		= 1;
 
 global.enemy_interval_multiplier	= 2;// 1 ataque a cada 2 segundos
-
-
-

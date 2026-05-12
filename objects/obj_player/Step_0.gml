@@ -16,6 +16,5 @@ if (global.life > 0)
 }
 else
 {
-	vertical_collision();
 	sprite_index	= spr_dead_player;
 }

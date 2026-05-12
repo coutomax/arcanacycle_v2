@@ -1,8 +1,7 @@
 depth		= 1;
 
-//variáveis editaveis
 duration	= 0;
-damage		= 7 * global.damage_multiplier;
+damage		= 0;
 
 xspd		= 0;
 yspd		= 0;

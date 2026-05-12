@@ -1,7 +1,7 @@
 depth		= 2;
 
 life		= 25 * global.enemy_life_multiplier;
-damage		= 15 * global.enemy_damage_multiplier;
+damage		= 0;
 experience	= 7	 * global.enemy_exp_multiplier;
 target_x	= 0;
 target_y	= 0;
@@ -24,13 +24,10 @@ pursue			= false;
 toggle_parts	= true;
 alive			= true;
 
-
 rotate_after_die		= false;
 custom_attack_speed		= 0;
 
 create_on_die			= [];
-
-
 
 function chaser ()
 {
@@ -90,8 +87,14 @@ function enemy_die ()
 {
 	if (life <= 0)
 	{
+		if (alive)
+		{
+			array_push(global.objects_list, self);
+		}
+		
 		alive				= false;
 		sprite_index		= dead_sprite;
+		
 		if (array_length(create_on_die) > 0 && toggle_parts)
 		{
 			toggle_parts	= false;
@@ -99,6 +102,7 @@ function enemy_die ()
 			{
 				var dead_parts		= instance_create_layer(x, y, "Instances", create_on_die[i]);
 				
+				array_push(global.objects_list, dead_parts);
 			}
 		}
 		

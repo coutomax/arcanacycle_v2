@@ -63,6 +63,7 @@
   "name":"Arcana_cycle_v2",
   "resources":[
     {"id":{"name":"main_font","path":"fonts/main_font/main_font.yy",},},
+    {"id":{"name":"Fazer","path":"notes/Fazer/Fazer.yy",},},
     {"id":{"name":"Fixes","path":"notes/Fixes/Fixes.yy",},},
     {"id":{"name":"Ideias","path":"notes/Ideias/Ideias.yy",},},
     {"id":{"name":"obj_antenna","path":"objects/obj_antenna/obj_antenna.yy",},},

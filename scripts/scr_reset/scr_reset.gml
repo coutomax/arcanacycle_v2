@@ -6,16 +6,19 @@
 
 function scr_reset()
 {
+	//arrays
+	global.objects_list		= []; //lista de objetos para serem deletados
+
 	//booleanos
 	global.new_game			= true;
 	global.paused			= false;
-	global.in_game			= false;
+	global.in_game			= true;
 
 	//numerics
 	global.gravity			= .25;
 	global.max_gravity		= 8;
 	global.max_life			= 100;
-	global.life				= 100;
+	global.life				= 1000;
 	global.damage			= 5;
 	global.attack_interval	= 1;
 	global.jump_quantity	= 1;
@@ -29,6 +32,8 @@ function scr_reset()
 	global.damage_caused		= 0;
 	global.damage_taken			= 0;
 	global.most_damage_caused	= 0;
+	global.experience			= 0;
+	global.level				= 0;
 
 	//numerics para inimigos
 	global.enemies			= 1;
@@ -37,7 +42,7 @@ function scr_reset()
 
 	global.enemy_attack_interval	= 2;
 
-	//multiplicadores
+	//multiplicadores do jogador
 	global.life_multiplier			= 1;
 	global.damage_multiplier		= 1;
 

@@ -9,5 +9,6 @@ pursue			= true;
 create_on_die	= [obj_antenna, obj_antenna, obj_wing, obj_wing];
 
 rotate			= -90;
+damage			= 7 * global.enemy_damage_multiplier
 
 rotate_after_die	= true;

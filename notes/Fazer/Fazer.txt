@@ -1,0 +1,19 @@
+/*
+*
+*
+*					COISAS DEFINIDAS PARA IMPLEMENTAR
+*						  
+*
+*/
+
+1 - Sistema para limpar os objetos na tela
+
+2 - Sistema de waves
+
+3 - Sistema para escolha de cartas
+
+4 - Definir drops, raridade de itens e usos para esses itens 
+
+5 - Colocar audio nos inimigos e nos projéteis
+
+6 - Exibir o dano na tela, tanto causado quanto recebido
