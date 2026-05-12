@@ -10,7 +10,7 @@ target		= noone;
 
 custom_speed	= false;
 
-function moviment ()
+function movement ()
 {
 	if (!custom_speed)
 	{

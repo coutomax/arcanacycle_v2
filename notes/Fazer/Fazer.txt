@@ -6,8 +6,6 @@
 *
 */
 
-1 - Sistema para limpar os objetos na tela
-
 2 - Sistema de waves
 
 3 - Sistema para escolha de cartas
@@ -17,3 +15,15 @@
 5 - Colocar audio nos inimigos e nos projéteis
 
 6 - Exibir o dano na tela, tanto causado quanto recebido
+
+7 - Nivelar o dano dos inimigos pra ficar jogável
+
+/*
+*
+*
+*					COISAS JÁ IMPLEMENTADAS
+*						  
+*
+*/
+
+1 - Sistema para limpar os objetos na tela - OK

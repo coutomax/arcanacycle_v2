@@ -3,7 +3,8 @@ xspd				= 0;
 yspd				= 0;
 walk_speed			= 2.5;
 
-at_ground			= false;	
+at_ground			= false;
+alive				= true;
 
 //definições do pulo
 jump_spd			= -5.5;

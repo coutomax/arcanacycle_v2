@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_pop_damage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_pop_damage",
+  "parent":{
+    "name":"Damage_Popup",
+    "path":"folders/Scripts/General_Controllers/Damage_Popup.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

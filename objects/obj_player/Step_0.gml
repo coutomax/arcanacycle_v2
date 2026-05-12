@@ -17,4 +17,5 @@ if (global.life > 0)
 else
 {
 	sprite_index	= spr_dead_player;
+	scr_gravity_fall(self);
 }

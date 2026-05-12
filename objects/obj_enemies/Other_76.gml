@@ -4,6 +4,7 @@ switch (event_data[? "message"])
 		if (global.life > 0 && attack_cd.is_done())
 		{
 			global.life		-= damage;
+			scr_pop_damage(self, obj_player);
 		}
 	break;
 	
