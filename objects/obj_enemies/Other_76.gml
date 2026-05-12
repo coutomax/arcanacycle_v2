@@ -1,21 +1,19 @@
 switch (event_data[? "message"])
 {
 	case "hit":
-		if (global.life > 0)
+		if (global.life > 0 && attack_cd.is_done())
 		{
 			global.life		-= damage;
 		}
-			
 	break;
 	
 	case "reset":
-		if (attack_cooldown.is_done() || !attack_cooldown.active 
+		if (attack_cd.is_done() || !attack_cd.active 
 			&& global.life > 0 && alive)
 		{
 			sprite_index	= idle_sprite;
-			attack_cooldown.start();
+			attack_cd.start();
 		}
-		attack_cooldown.update();
-		
+		attack_cd.update();
 	break;
 }

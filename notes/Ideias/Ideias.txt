@@ -8,4 +8,6 @@
 
 1 - Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
 
-2 -
+2 - Adicionar algum projétil onde a gravidade é aplicada.
+
+3 - Adicionar uma carta onde os projéteis atravessam os inimigos

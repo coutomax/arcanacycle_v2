@@ -9,21 +9,32 @@ y_check		= 1;
 
 xspd		= 0;
 yspd		= 0;
+rotate		= 0;
+
 total_speed	= 2.2 * global.enemy_speed_multiplier;
 
-
-attack_cooldown		= scr_timer( 1 * global.enemy_attack_interval );
+cooldown		= 1 * global.enemy_attack_interval
+attack_cd		= scr_timer(cooldown);
 
 idle_sprite		= noone;
 attack_sprite	= noone;
-attack_frame	= 0;
+dead_sprite		= noone;
 
-alive		= true;
-pursue		= false;
+pursue			= false;
+toggle_parts	= true;
+alive			= true;
+
+
+rotate_after_die		= false;
+custom_attack_speed		= 0;
+
+create_on_die			= [];
+
+
 
 function chaser ()
 {
-	if (pursue)
+	if (pursue && alive)
 	{
 		target_x	= obj_player.x;
 		target_y	= obj_player.y;
@@ -31,7 +42,6 @@ function chaser ()
 		if (alive)
 		{
 			var dir			= point_direction(x, y, target_x, target_y);
-			
 			
 			mp_potential_step(target_x, target_y, total_speed, false);
 			
@@ -48,10 +58,9 @@ function chaser ()
 		}
 	}
 }
-
 function enemy_attack ()
 {
-	if (pursue)
+	if (pursue && alive)
 	{
 		if (y < yprevious)
 		{
@@ -64,17 +73,44 @@ function enemy_attack ()
 		
 		if (place_meeting(x - (15 * image_xscale), y + (20 * y_check), obj_player))
 		{
-			if	(attack_cooldown.is_done() || !attack_cooldown.active)
+			if	(attack_cd.is_done() || !attack_cd.active)
 			{
 				sprite_index		= attack_sprite;
 			}
-			attack_cooldown.update();
+			attack_cd.update();
 		}
 		else
 		{
-			attack_cooldown.update();
+			attack_cd.update();
 			sprite_index		= idle_sprite;
 		}
-		
 	}
+}
+function enemy_die ()
+{
+	if (life <= 0)
+	{
+		alive				= false;
+		sprite_index		= dead_sprite;
+		if (array_length(create_on_die) > 0 && toggle_parts)
+		{
+			toggle_parts	= false;
+			for (var i = 0; i < array_length(create_on_die); i++)
+			{
+				var dead_parts		= instance_create_layer(x, y, "Instances", create_on_die[i]);
+				
+			}
+		}
+		
+		if (rotate_after_die && image_angle != (rotate * image_xscale))
+		{
+			image_angle		-= 5 * image_xscale;
+		}
+		
+		scr_gravity_fall(self);
+	}
+}
+function drop_roll ()
+{
+	
 }

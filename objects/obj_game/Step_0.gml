@@ -5,6 +5,7 @@ if (global.paused)
 
 if (global.life < 0)
 {
-	obj_hp_bar.sprite_index		= spr_broken_hp_bar;
 	global.life					= 0;
+	obj_hp_bar.sprite_index		= spr_broken_hp_bar;
+	audio_play_sound(snd_breaking_glass, 0, false, 0.07);
 }

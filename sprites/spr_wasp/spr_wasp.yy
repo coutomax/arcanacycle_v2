@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Assets/Game_Components/Enemies.yy",
+    "name":"Wasp",
+    "path":"folders/Assets/Game_Components/Enemies/Wasp.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

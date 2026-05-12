@@ -10,10 +10,12 @@ image_speed			= 1;
 
 if (global.life > 0)
 {
-	movimento();
+	movement();
 	scr_jump(self);
+	attack();
 }
 else
 {
+	vertical_collision();
 	sprite_index	= spr_dead_player;
 }

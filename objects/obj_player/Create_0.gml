@@ -14,7 +14,10 @@ jump_count			= 0;
 
 obstacle			= noone;
 
-function movimento()
+cooldown			= 1 * global.attack_interval
+attack_cd			= scr_timer(cooldown);
+
+function movement()
 {
 	image_speed			= 1;
 			
@@ -24,10 +27,8 @@ function movimento()
 	var _s_pressed			= keyboard_check( ord("S") );
 	var _d_pressed			= keyboard_check( ord("D") );
 						
-	var dir					= (_d_pressed - _a_pressed);			
-				
-	//aplica a gravidade no yspd	
-	yspd				+= global.gravity;						
+	var dir					= (_d_pressed - _a_pressed);				
+							
 	xspd				= dir * walk_speed;
 			
 	if (dir != 0)
@@ -44,15 +45,30 @@ function movimento()
  
 	var _h_collision	= move_and_collide(xspd, 0, obj_wall, abs(xspd));
  
-	if (at_ground && place_meeting(x,y + abs(xspd) + 1 ,obj_wall) && yspd >= 0)
+	if (at_ground && place_meeting(x, y + abs(xspd) + 1 ,obj_wall) && yspd >= 0)
 	{   
 	    yspd			+= abs(xspd) + 1;
 	}
  
-	var _v_collision = move_and_collide(0, yspd, obj_wall, abs(yspd)+1 , xspd, yspd, xspd, yspd)
+	scr_gravity_fall(self);	
+}
+function attack ()	//criar subrotina pra quando houverem cartas que afetam os projéteis
+{
+	var mouse_click		= mouse_check_button( mb_left );
 	
-	if (array_length(_v_collision)  > 0)
+	if (mouse_click && attack_cd.is_done())
 	{
-	    yspd = 0;
-	}		
+		var dir			= point_direction(x, y, mouse_x, mouse_y);
+		
+		var attack		= instance_create_layer(x, y, "Instances", obj_fireball);
+		
+		attack.xspd		= lengthdir_x(attack.xspd, dir);
+		attack.yspd		= lengthdir_y(attack.yspd, dir);
+		
+		attack.direction = dir;
+		attack.image_angle = dir - 220;
+	
+		attack_cd.start();
+	}
+	attack_cd.update();
 }

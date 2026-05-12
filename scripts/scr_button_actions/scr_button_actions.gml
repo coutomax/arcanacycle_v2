@@ -17,6 +17,7 @@ function scr_button_actions(obj, actions){
 			{
 				case	"new_game":
 					layer_set_visible("ui_start_menu", false);
+					layer_set_visible("ui_game_over", false);
 					room_goto(0);
 					global.in_game		= true;
 				break;		
@@ -49,6 +50,10 @@ function scr_button_actions(obj, actions){
 				case "resume":
 					layer_set_visible("ui_pause_menu", false);
 					global.paused = false;
+				break;
+				
+				case "back_after_die":
+					
 				break;
 			}
 		}

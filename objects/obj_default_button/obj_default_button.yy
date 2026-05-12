@@ -4,7 +4,9 @@
   "eventList":[],
   "managed":true,
   "name":"obj_default_button",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"actions","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"new_game\"",},
+  ],
   "parent":{
     "name":"UI_generals",
     "path":"folders/Objects/UI_generals.yy",
