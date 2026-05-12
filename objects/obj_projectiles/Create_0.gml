@@ -11,7 +11,7 @@ target		= noone;
 
 custom_speed	= false;
 
-function moviment()
+function moviment ()
 {
 	if (!custom_speed)
 	{
