@@ -6,10 +6,7 @@
 *
 */
 
-1 - Corrigir bug no ataque dos inimigos, onde todos atacam ao mesmo tempo - OK
-	Parece ter relação com o attack_cd
-	
-2 - Corrigir bug onde o dano de todos os inimigos é somado em um único dano.
+	-
 
 /*
 *
@@ -19,6 +16,13 @@
 *
 */
 
-1 - Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula - OK
+	- Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula - OK
 
-2 - Melhorar o sistema de audio dos inimigos; - OK
+	- Melhorar o sistema de audio dos inimigos; - OK
+
+	- Corrigir bug no ataque dos inimigos, onde todos atacam ao mesmo tempo - OK
+	  Parece ter relação com o attack_cd
+	
+	- Corrigir bug onde o dano de todos os inimigos é somado em um único dano. - OK
+	
+	- Corrigir o posicionamento do sprite spr_dead_player, ele está um pouco para o lado - OK
