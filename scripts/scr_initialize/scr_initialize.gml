@@ -4,6 +4,8 @@
 
 */
 
+randomize();
+
 //arrays
 global.objects_list		= []; //lista de objetos para serem deletados
 

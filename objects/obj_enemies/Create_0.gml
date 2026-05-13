@@ -34,6 +34,7 @@ rotate_after_die		= false;
 custom_attack_speed		= 0;
 
 create_on_die			= [];
+drop_on_die				= [];
 
 function chaser ()
 {
