@@ -1,5 +1,5 @@
 function scr_button_actions(obj, actions){
-	var a	=
+	var _a	=
 	{
 		
 		object			: obj,
@@ -59,6 +59,6 @@ function scr_button_actions(obj, actions){
 		}
 	}
 	
-	return a;
+	return _a;
 }
 

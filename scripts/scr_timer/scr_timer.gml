@@ -1,9 +1,9 @@
 function scr_timer(seconds){
 	
-	var steps	= seconds * room_speed;
+	var _steps	= seconds * room_speed;
 	
 	return {
-		duration	: steps,
+		duration	: _steps,
 		current		: 0,
 		active		: false,
 		

@@ -1,21 +1,22 @@
-switch (event_data[? "message"])
+var _instance_id		= layer_instance_get_instance(event_data[? "element_id"]);
+
+if (_instance_id == id)
 {
-	case "hit":
-		if (global.life > 0 && attack_cd.is_done())
-		{
-			global.life		-= damage;
-			scr_pop_damage(self, obj_player);
-			attack_cd.start();
-		}
-	break;
+	switch (event_data[? "message"])
+	{
+		case "hit":
+			if (global.life > 0)
+			{
+				global.life		-= damage;
+				scr_pop_damage(self, obj_player);
+				audio_play_sound(snd_damage_taken, 0, false, 0.03);
+				attack_cd.update();
+			}
+			attack_cd.update();
+		break;
 	
-	case "reset":
-		if (attack_cd.is_done() || !attack_cd.active 
-			&& global.life > 0 && alive)
-		{
+		case "reset":
 			sprite_index	= idle_sprite;
-			attack_cd.start();
-		}
-		attack_cd.update();
-	break;
+		break;
+	}
 }

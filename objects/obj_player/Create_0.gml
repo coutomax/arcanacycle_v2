@@ -28,13 +28,13 @@ function movement()
 	var _s_pressed			= keyboard_check( ord("S") );
 	var _d_pressed			= keyboard_check( ord("D") );
 						
-	var dir					= (_d_pressed - _a_pressed);				
+	var _dir					= (_d_pressed - _a_pressed);				
 							
-	xspd				= dir * walk_speed;
+	xspd				= _dir * walk_speed;
 			
-	if (dir != 0)
+	if (_dir != 0)
 	{
-		image_xscale		= dir;
+		image_xscale		= _dir;
 		sprite_index	= spr_walking_player
 	}
 	else
@@ -55,19 +55,19 @@ function movement()
 }
 function attack ()	//criar subrotina pra quando houverem cartas que afetam os projéteis
 {
-	var mouse_click		= mouse_check_button( mb_left );
+	var _mouse_click		= mouse_check_button( mb_left );
 	
-	if (mouse_click && attack_cd.is_done())
+	if (_mouse_click && attack_cd.is_done())
 	{
-		var dir			= point_direction(x, y, mouse_x, mouse_y);
+		var _dir			= point_direction(x, y, mouse_x, mouse_y);
 		
-		var attack		= instance_create_layer(x, y, "Instances", obj_fireball);
+		var _attack		= instance_create_layer(x, y, "Instances", obj_fireball);
 		
-		attack.xspd		= lengthdir_x(attack.xspd, dir);
-		attack.yspd		= lengthdir_y(attack.yspd, dir);
+		_attack.xspd		= lengthdir_x(_attack.xspd, _dir);
+		_attack.yspd		= lengthdir_y(_attack.yspd, _dir);
 		
-		attack.direction = dir;
-		attack.image_angle = dir - 220;
+		_attack.direction = _dir;
+		_attack.image_angle = _dir - 220;
 	
 		attack_cd.start();
 	}

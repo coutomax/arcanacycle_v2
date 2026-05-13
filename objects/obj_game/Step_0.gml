@@ -6,8 +6,13 @@ if (global.paused)
 if (global.life < 0)
 {
 	global.life					= 0;
-	obj_hp_bar.sprite_index		= spr_broken_hp_bar;
-	audio_play_sound(snd_breaking_glass, 0, false, 0.07);
+	
+	if (toggle)
+	{
+		toggle						= false;
+		obj_hp_bar.sprite_index		= spr_broken_hp_bar;
+		audio_play_sound(snd_breaking_glass, 0, false, 0.37);
+	}
 }
 
 object_cleaner();

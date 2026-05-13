@@ -1,17 +1,17 @@
 depth		= 2;
 
-life		= 25 * global.enemy_life_multiplier;
-damage		= 0;
-experience	= 7	 * global.enemy_exp_multiplier;
-target_x	= 0;
-target_y	= 0;
-y_check		= 1;
+life			= 25 * global.enemy_life_multiplier;
+damage			= 0;
+experience		= 7	 * global.enemy_exp_multiplier;
+target_x		= 0;
+target_y		= 0;
+y_check			= 1;
 
-xspd		= 0;
-yspd		= 0;
-rotate		= 0;
+xspd			= 0;
+yspd			= 0;
+rotate			= 0;
 
-total_speed	= 2.2 * global.enemy_speed_multiplier;
+total_speed		= 2.2 * global.enemy_speed_multiplier;
 
 cooldown		= 1 * global.enemy_attack_interval
 attack_cd		= scr_timer(cooldown);
@@ -25,7 +25,6 @@ loop			= noone;
 sound			= noone;
 sound_offset	= 0; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
 sound_loop		= false;
-
 
 pursue			= false;
 toggle_parts	= true;
@@ -45,11 +44,11 @@ function chaser ()
 		
 		if (alive)
 		{
-			var dir			= point_direction(x, y, target_x, target_y);
+			var _dir			= point_direction(x, y, target_x, target_y);
 			
 			mp_potential_step(target_x, target_y, total_speed, false);
 			
-			direction	= dir;
+			direction	= _dir;
 			
 			if (direction > 90 && direction < 270)
 			{
@@ -74,19 +73,21 @@ function enemy_attack ()
 		{
 			y_check		= 1;
 		}		
+		var _attacker	= instance_place(x - (15 * image_xscale), y + (20 * y_check), obj_player);
 		
-		if (place_meeting(x - (15 * image_xscale), y + (20 * y_check), obj_player))
+		if (_attacker != noone)
 		{
 			if	(attack_cd.is_done() || !attack_cd.active)
 			{
 				sprite_index		= attack_sprite;
+				attack_cd.start();
 			}
-			attack_cd.update();
+			attack_cd.update();			
 		}
 		else
 		{
-			attack_cd.update();
 			sprite_index		= idle_sprite;
+			attack_cd.update();
 		}
 	}
 }
@@ -116,9 +117,9 @@ function enemy_die ()
 			toggle_parts	= false;
 			for (var i = 0; i < array_length(create_on_die); i++)
 			{
-				var dead_parts		= instance_create_layer(x, y, "Instances", create_on_die[i]);
+				var _dead_parts		= instance_create_layer(x, y, "Instances", create_on_die[i]);
 				
-				array_push(global.objects_list, dead_parts);
+				array_push(global.objects_list, _dead_parts);
 			}
 		}
 		
@@ -134,8 +135,8 @@ function enemy_sound ()
 {
 	if (sound != noone && alive && !audio_is_playing(sound))
 	{	
-		var distance	= point_distance(x, y, obj_player.x, obj_player.y);
-		if ((sound_offset > 0 && distance <= sound_offset)
+		var _distance	= point_distance(x, y, obj_player.x, obj_player.y);
+		if ((sound_offset > 0 && _distance <= sound_offset)
 			|| sound_offset == -1)
 		{
 			loop = audio_play_sound(sound, 0, false, 0.07);

@@ -6,7 +6,10 @@
 *
 */
 
-1 - 
+1 - Corrigir bug no ataque dos inimigos, onde todos atacam ao mesmo tempo - OK
+	Parece ter relação com o attack_cd
+	
+2 - Corrigir bug onde o dano de todos os inimigos é somado em um único dano.
 
 /*
 *

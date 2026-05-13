@@ -3,10 +3,10 @@ function scr_pop_damage(inst, target){
 	{
 		if (target.alive)
 		{
-			var dmg		= instance_create_layer(target.x, target.y, "Instances", obj_damage);
+			var _dmg		= instance_create_layer(target.x, target.y, "Instances", obj_damage);
 		
-			dmg.colour	= c_red;
-			dmg.text	= string(inst.damage);
+			_dmg.colour	= c_red;
+			_dmg.text	= string(inst.damage);
 		}
 	}
 }

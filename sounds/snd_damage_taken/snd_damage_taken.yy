@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_breaking_glass",
+  "%Name":"snd_damage_taken",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.4702041,
+  "duration":0.5288889,
   "exportDir":"",
-  "name":"snd_breaking_glass",
+  "name":"snd_damage_taken",
   "parent":{
     "name":"Player",
     "path":"folders/Sounds/Game_Enteties/Player.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_breaking_glass.mp3",
+  "soundFile":"snd_damage_taken.wav",
   "volume":1.0,
 }

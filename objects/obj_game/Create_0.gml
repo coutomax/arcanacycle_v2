@@ -1,3 +1,5 @@
+toggle		= true;
+
 function object_cleaner ()
 {
 	if (array_length(global.objects_list) > 50)

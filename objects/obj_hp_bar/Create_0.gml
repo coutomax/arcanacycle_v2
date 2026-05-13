@@ -18,9 +18,9 @@ function health_display()
 	
 	percent			= amount / max_amount;
 	
-	var layer_name	= layer_get_name(self.layer);
-	var element_id	= layer_text_get_id(layer_name, "txt_life_bar");
+	var _layer_name	= layer_get_name(self.layer);
+	var _element_id	= layer_text_get_id(_layer_name, "txt_life_bar");
 	
 
-	layer_text_text(element_id, $"{global.life}/{global.max_life}");	
+	layer_text_text(_element_id, $"{global.life}/{global.max_life}");	
 }
