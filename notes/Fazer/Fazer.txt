@@ -12,9 +12,9 @@
 
 4 - Definir drops, raridade de itens e usos para esses itens 
 
-5 - Colocar audio nos inimigos e nos projéteis
-
 7 - Nivelar o dano dos inimigos pra ficar jogável
+
+8 - Melhorar o sistema de audio baseado na distância
 
 /*
 *
@@ -27,3 +27,5 @@
 1 - Sistema para limpar os objetos na tela - OK
 
 6 - Exibir o dano na tela, tanto causado quanto recebido - OK
+
+5 - Colocar audio nos inimigos e nos projéteis - OK

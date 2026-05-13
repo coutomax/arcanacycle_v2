@@ -6,6 +6,16 @@
 *
 */
 
-1 - Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula 
+1 - 
 
-2 - Melhorar o sistema de audio dos inimigos;
+/*
+*
+*
+*							BUGS CORRIGIDOS
+*						   
+*
+*/
+
+1 - Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula - OK
+
+2 - Melhorar o sistema de audio dos inimigos; - OK

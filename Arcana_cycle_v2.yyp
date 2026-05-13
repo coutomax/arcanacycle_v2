@@ -56,6 +56,7 @@
     {"$GMFolder":"","%Name":"Wasp","folderPath":"folders/Sounds/Game_Enteties/Wasp.yy","name":"Wasp","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Game_events","folderPath":"folders/Sounds/Game_events.yy","name":"Game_events","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player_Dies","folderPath":"folders/Sounds/Game_events/Player_Dies.yy","name":"Player_Dies","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Background_Music","folderPath":"folders/Sounds/Background_Music.yy","name":"Background_Music","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sounds/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
@@ -101,6 +102,7 @@
     {"id":{"name":"scr_pop_damage","path":"scripts/scr_pop_damage/scr_pop_damage.yy",},},
     {"id":{"name":"scr_reset","path":"scripts/scr_reset/scr_reset.yy",},},
     {"id":{"name":"scr_timer","path":"scripts/scr_timer/scr_timer.yy",},},
+    {"id":{"name":"snd_background_music","path":"sounds/snd_background_music/snd_background_music.yy",},},
     {"id":{"name":"snd_breaking_glass","path":"sounds/snd_breaking_glass/snd_breaking_glass.yy",},},
     {"id":{"name":"snd_button_click_down","path":"sounds/snd_button_click_down/snd_button_click_down.yy",},},
     {"id":{"name":"snd_button_click_up","path":"sounds/snd_button_click_up/snd_button_click_up.yy",},},
