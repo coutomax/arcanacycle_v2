@@ -1,0 +1,11 @@
+/*
+*
+*
+*							BUGS CONHECIDOS
+*						   (AJUSTAR EM ORDEM)
+*
+*/
+
+1 - Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula 
+
+2 - Melhorar o sistema de audio dos inimigos;

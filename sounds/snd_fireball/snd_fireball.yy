@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_fireball",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.010703,
+  "exportDir":"",
+  "name":"snd_fireball",
+  "parent":{
+    "name":"Fire_Ball",
+    "path":"folders/Sounds/Game_Enteties/Projectiles/Fire_Ball.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_fireball.wav",
+  "volume":1.0,
+}

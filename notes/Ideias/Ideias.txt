@@ -11,3 +11,5 @@
 2 - Adicionar algum projétil onde a gravidade é aplicada.
 
 3 - Adicionar uma carta onde os projéteis atravessam os inimigos
+
+4 - Adicionar o global.audio_multiplier ao audio pra usar nas configurações

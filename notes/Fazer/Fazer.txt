@@ -14,8 +14,6 @@
 
 5 - Colocar audio nos inimigos e nos projéteis
 
-6 - Exibir o dano na tela, tanto causado quanto recebido
-
 7 - Nivelar o dano dos inimigos pra ficar jogável
 
 /*
@@ -27,3 +25,5 @@
 */
 
 1 - Sistema para limpar os objetos na tela - OK
+
+6 - Exibir o dano na tela, tanto causado quanto recebido - OK

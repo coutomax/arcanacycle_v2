@@ -11,4 +11,5 @@ image_speed			= 1;
 
 chaser();
 enemy_attack();
+enemy_sound();
 enemy_die();

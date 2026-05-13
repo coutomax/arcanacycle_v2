@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_wasp_buzz",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":3,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":2.7840135,
+  "exportDir":"",
+  "name":"snd_wasp_buzz",
+  "parent":{
+    "name":"Wasp",
+    "path":"folders/Sounds/Game_Enteties/Wasp.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wasp_buzz.wav",
+  "volume":1.0,
+}

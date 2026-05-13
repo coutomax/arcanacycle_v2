@@ -5,6 +5,7 @@ switch (event_data[? "message"])
 		{
 			global.life		-= damage;
 			scr_pop_damage(self, obj_player);
+			attack_cd.start();
 		}
 	break;
 	

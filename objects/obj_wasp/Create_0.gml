@@ -12,3 +12,8 @@ rotate			= -90;
 damage			= 7 * global.enemy_damage_multiplier
 
 rotate_after_die	= true;
+
+sound			= snd_wasp_buzz;
+sound_offset	= -1; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
+sound_loop		= true;
+die_sound		= snd_wasp_die;

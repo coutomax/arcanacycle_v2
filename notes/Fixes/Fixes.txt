@@ -1,9 +1,0 @@
-/*
-*
-*
-*							BUGS CONHECIDOS
-*						   (AJUSTAR EM ORDEM)
-*
-*/
-
-1 -

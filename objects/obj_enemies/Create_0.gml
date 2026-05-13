@@ -20,6 +20,13 @@ idle_sprite		= noone;
 attack_sprite	= noone;
 dead_sprite		= noone;
 
+die_sound		= noone;
+loop			= noone;
+sound			= noone;
+sound_offset	= 0; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
+sound_loop		= false;
+
+
 pursue			= false;
 toggle_parts	= true;
 alive			= true;
@@ -87,9 +94,18 @@ function enemy_die ()
 {
 	if (life <= 0)
 	{
+		if (audio_is_playing(loop))
+		{
+			audio_stop_sound(loop);
+		}
+		
 		if (alive)
 		{
 			array_push(global.objects_list, self);
+			if (die_sound != noone)
+			{
+				audio_play_sound(die_sound, 0, false, 0.07);
+			}
 		}
 		
 		alive				= false;
@@ -112,6 +128,19 @@ function enemy_die ()
 		}
 		
 		scr_gravity_fall(self);
+	}
+}
+function enemy_sound ()
+{
+	if (sound != noone && alive && !audio_is_playing(sound))
+	{	
+		var distance	= point_distance(x, y, obj_player.x, obj_player.y);
+		if ((sound_offset > 0 && distance <= sound_offset)
+			|| sound_offset == -1)
+		{
+			loop = audio_play_sound(sound, 0, false, 0.07);
+				audio_sound_loop(loop, sound_loop);
+		}
 	}
 }
 function drop_roll ()

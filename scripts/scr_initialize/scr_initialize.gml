@@ -40,6 +40,9 @@ global.wave				= 1;
 
 global.enemy_attack_interval	= 2;
 
+//multiplicadores de configuração
+global.audio_multiplier			= 1;
+
 //multiplicadores do jogador
 global.life_multiplier			= 1;
 global.damage_multiplier		= 1;
