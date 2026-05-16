@@ -56,3 +56,18 @@ global.enemy_speed_multiplier	= 1;
 global.enemy_exp_multiplier		= 1;
 
 global.enemy_interval_multiplier	= 2;// 1 ataque a cada 2 segundos
+
+//drop table global para drops simples (mesmo comportamento, usam sprites)
+global.drop_table	= [
+	{item: -1, sprite: noone, weigth: 3},//drop unico
+	{item: 0, sprite: noone, weigth: 85},//sem drop
+	{item: 1, sprite: spr_health, weigth: 1500}
+	
+];
+
+//drop table global para drops com comportamentos únicos (usa objetos próprios)
+global.unic_drop_table		= [
+	{item: 1, obj: noone, weigth: 100},
+	{item: 2, obj: noone, weigth: 100},
+	{item: 3, obj: noone, weigth: 100}
+];

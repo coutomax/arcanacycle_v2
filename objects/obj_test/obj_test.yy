@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_test",
-    "path":"sprites/spr_test/spr_test.yy",
+    "name":"spr_test_slop",
+    "path":"sprites/spr_test_slop/spr_test_slop.yy",
   },
   "spriteMaskId":null,
   "visible":true,

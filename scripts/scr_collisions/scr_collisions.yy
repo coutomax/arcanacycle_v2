@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_gravity_fall",
+  "%Name":"scr_collisions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_gravity_fall",
+  "name":"scr_collisions",
   "parent":{
     "name":"Character_movement",
     "path":"folders/Scripts/General_Controllers/Character_movement.yy",

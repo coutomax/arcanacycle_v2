@@ -5,16 +5,19 @@
 *						  
 *
 */
+	- Melhorar o sistema de Parts, removendo objetos extras e usando somente os sprites.
+	
+	- Adicionar movimento senoidal aos drops e deixá-los pouco acima do chão.
 
-2 - Sistema de waves
+	- Sistema de waves
 
-3 - Sistema para escolha de cartas
+	- Sistema para escolha de cartas
 
-4 - Definir drops, raridade de itens e usos para esses itens 
+	- Definir drops, raridade de itens e usos para esses itens 
 
-7 - Nivelar o dano dos inimigos pra ficar jogável
+	- Nivelar o dano dos inimigos pra ficar jogável
 
-8 - Melhorar o sistema de audio baseado na distância
+	- Melhorar o sistema de audio baseado na distância
 
 /*
 *
@@ -24,10 +27,10 @@
 *
 */
 
-1 - Sistema para limpar os objetos na tela - OK
+	- Sistema para limpar os objetos na tela - OK
 
-6 - Exibir o dano na tela, tanto causado quanto recebido - OK
+	- Exibir o dano na tela, tanto causado quanto recebido - OK
 
-5 - Colocar audio nos inimigos e nos projéteis - OK
+	- Colocar audio nos inimigos e nos projéteis - OK
 
-9 - Adicionar som ao tomar dano - OK
+	- Adicionar som ao tomar dano - OK

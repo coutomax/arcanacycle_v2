@@ -1,9 +1,11 @@
 depth				= 1;
 xspd				= 0;
 yspd				= 0;
-walk_speed			= 2.5;
+walk_speed			= 3;
+s_press				= false;
 
-at_ground			= false;
+at_ground			= true;
+
 alive				= true;
 
 //definições do pulo
@@ -28,32 +30,27 @@ function movement()
 	var _s_pressed			= keyboard_check( ord("S") );
 	var _d_pressed			= keyboard_check( ord("D") );
 						
-	var _dir					= (_d_pressed - _a_pressed);				
+	var _dir				= (_d_pressed - _a_pressed);				
 							
-	xspd				= _dir * walk_speed;
+	xspd					= _dir * walk_speed;
+	
+	s_press					= _s_pressed;
 			
 	if (_dir != 0)
 	{
 		image_xscale		= _dir;
-		sprite_index	= spr_walking_player
+		sprite_index		= spr_walking_player;
 	}
 	else
 	{
-		sprite_index	= spr_stopped_player;
-	}
-			
-	at_ground			= place_meeting(x, y + 1, obj_wall);
- 
-	var _h_collision	= move_and_collide(xspd, 0, obj_wall, abs(xspd));
- 
-	if (at_ground && place_meeting(x, y + abs(xspd) + 1 ,obj_wall) && yspd >= 0)
-	{   
-	    yspd			+= abs(xspd) + 1;
-	}
- 
-	scr_gravity_fall(self);	
+		sprite_index		= spr_stopped_player;
+	}	
+	
+	scr_collisions(self);
+	
+	movement_apply();
 }
-function attack ()	//criar subrotina pra quando houverem cartas que afetam os projéteis
+function attack () //criar subrotina pra quando houverem cartas que afetam os projéteis
 {
 	var _mouse_click		= mouse_check_button( mb_left );
 	
@@ -61,7 +58,7 @@ function attack ()	//criar subrotina pra quando houverem cartas que afetam os pr
 	{
 		var _dir			= point_direction(x, y, mouse_x, mouse_y);
 		
-		var _attack		= instance_create_layer(x, y, "Instances", obj_fireball);
+		var _attack			= instance_create_layer(x, y, "Instances", obj_fireball);
 		
 		_attack.xspd		= lengthdir_x(_attack.xspd, _dir);
 		_attack.yspd		= lengthdir_y(_attack.yspd, _dir);
@@ -72,4 +69,11 @@ function attack ()	//criar subrotina pra quando houverem cartas que afetam os pr
 		attack_cd.start();
 	}
 	attack_cd.update();
+}
+function movement_apply ()
+{
+	x			+= round(xspd);
+	y			+= round(yspd);
+	
+	show_debug_message($"{x}, {y}")
 }

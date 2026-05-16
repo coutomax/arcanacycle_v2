@@ -6,7 +6,7 @@
 *
 */
 
-	-
+	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos
 
 /*
 *
@@ -26,3 +26,9 @@
 	- Corrigir bug onde o dano de todos os inimigos é somado em um único dano. - OK
 	
 	- Corrigir o posicionamento do sprite spr_dead_player, ele está um pouco para o lado - OK
+	
+	- Ajustar a colisão dos objetos quando inimigos morrem, ou quando drops surgem - OK
+	  no meio de uma platarforma
+		
+	- Corrigir problema com o movimento onde há subpixels, que está fazneo o sprite ficar - OK
+	  bugado.

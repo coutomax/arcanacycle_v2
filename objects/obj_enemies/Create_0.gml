@@ -108,6 +108,8 @@ function enemy_die ()
 			{
 				audio_play_sound(die_sound, 0, false, 0.07);
 			}
+			
+			scr_drop_roll(global.drop_table);
 		}
 		
 		alive				= false;
@@ -129,7 +131,10 @@ function enemy_die ()
 			image_angle		-= 5 * image_xscale;
 		}
 		
-		scr_gravity_fall(self);
+		scr_collisions(self);
+		
+		y		+= round(yspd);
+		x		+= round(xspd);
 	}
 }
 function enemy_sound ()

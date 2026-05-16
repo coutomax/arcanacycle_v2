@@ -1,5 +1,7 @@
 toggle		= true;
 
+gpu_set_texfilter(false);
+
 function object_cleaner ()
 {
 	if (array_length(global.objects_list) > 50)

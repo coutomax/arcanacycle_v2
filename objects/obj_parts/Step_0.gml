@@ -3,5 +3,6 @@ if (global.paused)
 	exit;
 }
 
+
+scr_collisions(self);
 movement();
-scr_gravity_fall(self);

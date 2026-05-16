@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_drop_roll",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_drop_roll",
+  "parent":{
+    "name":"General_Controllers",
+    "path":"folders/Scripts/General_Controllers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

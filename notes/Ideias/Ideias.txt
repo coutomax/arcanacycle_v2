@@ -5,11 +5,22 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	
+	- Criar uma carta que baús aparecem com algum bonus temporário, ou item, ou algo do tipo
 
-1 - Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+	- Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+		
+		Ideia de puzzle: O jogador aparece em outra room com várias cartas aleatórias dropadas
+		e precisa sobreviver 60s pra renascer.
 
-2 - Adicionar algum projétil onde a gravidade é aplicada.
+	- Adicionar algum projétil onde a gravidade é aplicada.
 
-3 - Adicionar uma carta onde os projéteis atravessam os inimigos
+	- Adicionar uma carta onde os projéteis atravessam os inimigos.
 
-4 - Adicionar o global.audio_multiplier ao audio pra usar nas configurações
+	- Adicionar o global.audio_multiplier ao audio pra usar nas configurações.
+
+	- Adicionar um botão expansor para mostrar as estatísticas da rodada ou do jogo.
+
+	- Adicionar drops exclusivos para cada/alguns inimigos.
+
+	- Fazer carta que gere uma bolha ou escudo ao redor do player.
