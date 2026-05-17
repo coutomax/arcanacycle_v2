@@ -5,9 +5,17 @@
 *						  
 *
 */
+
+	- Colocar uma HUD para mostrar o ícone de cada carta ativa (ônus e bônus)
+	
 	- Melhorar o sistema de Parts, removendo objetos extras e usando somente os sprites.
 
-	- Sistema de waves
+	- Sistema de waves (Acho que criar waves fixas talvez seja melhor no primeiro momento)
+	  criar uma struct com os objetos e a quantidade de cada um. 
+	  
+	- Adicionar um modo de jogo que libera depois de concluir o jogo principal;
+	  nesse modo, os inimigos nascem aleatoriamente, em quantidades crescentes e infinitamente.
+	  Há um limite para cartas.
 
 	- Sistema para escolha de cartas
 

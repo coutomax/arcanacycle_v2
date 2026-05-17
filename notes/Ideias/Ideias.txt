@@ -5,24 +5,56 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	- Fazer com que alguns inimigos aleatóriamente desviem dos projéteis
 	
-	- Criar uma carta que baús aparecem com algum bonus temporário, ou item, ou algo do tipo
-
-	- Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+	- Avaliar se faz o player e os inimigos piscarem ao tomar dano
+	
+	- Criar mais drops
+		- Criar um pernil ou presunto que cura 50 de vida
+		- Criar um sanduiche (fazer um formato de pão) que cura 15
+		- Criar uma poção com status aleatório (Pode curar, dar dano, 
+		  envenenar, deixar lento, inverte os controles por um tempo)
+		- Criar poções no geral com os status acima e outros mais.
+		- 
+	
+	- Criar mais inimigos
+		- Vespa diferente que atira ferrão;
+		- Inimigo que cospe ácido no chão (se pisar toma dano);
+		- Inimigo que teleporta para perto ou que;
+		- Inimigo que stuna;
+		- Inimigo que joga gosma no chão (faz escorregar) ==> acredito que esse dê trabalho;
+		- Inimigo que surge do chão (zumbi, talvez);
+		- Inimigo que cura outros que estão próximos;
+		- Inimigo que invoca outros menores (tipo um necromante ou algo assim) algumas invocações
+		  podem ser o sprite do player, mas mais escuro ou "do mal";
+		- Inimigos de elite, que causem mais dano, tenham mais vida e que dropem cartas ou itens;
+		- Inimigo que cause dano de fogo e aplique status de queimadura (toma dano por segundo);
+		- Inimigo que explode causando dano em tudo ao redor;
+		- Inimigo que solta ovos que chocam e nascem novos inimigos;
+		- Inimigo que solta minas ou bombas que ficam mesmo após a sua morte;
+		- Inimigo com campo de força ou escudo;
+		- Aranha que solta teia que deixa lento;
+		- Cogumelo que envenena
 		
-		Ideia de puzzle: O jogador aparece em outra room com várias cartas aleatórias dropadas
+	- Criar mais cartas
+		- Adicionar uma carta que baús aparecem com algum bonus temporário, 
+		  ou item, ou algo do tipo.
+		- Adicionar uma carta onde os projéteis atravessam os inimigos.
+		- Adicionar carta que gere uma bolha ou escudo ao redor do player.
+		- Adicionar carta que permita vampirismo (recuperar vida com base no dano causado).
+		- Adicionar uma carta que invoque um ajudante para curar e/ou atacar.
+		
+	- Criar mais drops
+		- Adicionar um baú que solta moedas (usadas pra liberar upgrades permanentes)
+		- Adicionar drops exclusivos para alguns inimigos. (Avaliar quais drops e quais inimigos)
+		
+	
+	- Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+		- Ideia de puzzle: O jogador aparece em outra room com várias cartas aleatórias dropadas
 		e precisa sobreviver 60s pra renascer.
 
 	- Adicionar algum projétil onde a gravidade é aplicada.
 
-	- Adicionar uma carta onde os projéteis atravessam os inimigos.
-
 	- Adicionar o global.audio_multiplier ao audio pra usar nas configurações.
 
 	- Adicionar um botão expansor para mostrar as estatísticas da rodada ou do jogo.
-
-	- Adicionar drops exclusivos para alguns inimigos.
-
-	- Fazer carta que gere uma bolha ou escudo ao redor do player.
-	
-	- Fazer carta que permita vampirismo (recuperar vida com base no dano causado).

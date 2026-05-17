@@ -22,7 +22,7 @@ function scr_pop_damage(inst, target){
 				{
 					if ( global.life == global.max_life)
 					{
-						_popup.text		= "Full";
+						_popup.text		= "FULL";
 					}
 					else
 					{
