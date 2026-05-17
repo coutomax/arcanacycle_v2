@@ -6,8 +6,6 @@
 *
 */
 	- Melhorar o sistema de Parts, removendo objetos extras e usando somente os sprites.
-	
-	- Adicionar movimento senoidal aos drops e deixá-los pouco acima do chão.
 
 	- Sistema de waves
 

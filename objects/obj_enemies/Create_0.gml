@@ -69,7 +69,7 @@ function enemy_attack ()
 		if (y < yprevious)
 		{
 			y_check		= -1;
-		}
+		}  
 		else
 		{
 			y_check		= 1;

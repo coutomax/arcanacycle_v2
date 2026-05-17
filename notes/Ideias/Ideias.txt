@@ -21,6 +21,8 @@
 
 	- Adicionar um botão expansor para mostrar as estatísticas da rodada ou do jogo.
 
-	- Adicionar drops exclusivos para cada/alguns inimigos.
+	- Adicionar drops exclusivos para alguns inimigos.
 
 	- Fazer carta que gere uma bolha ou escudo ao redor do player.
+	
+	- Fazer carta que permita vampirismo (recuperar vida com base no dano causado).
