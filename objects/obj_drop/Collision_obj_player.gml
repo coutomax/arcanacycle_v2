@@ -8,7 +8,7 @@ switch (description)
 				
 		scr_pop_damage(self, other);
 		
-		global.life += global.heal * global.heal_multiplier;
+		global.life			+= global.heal * global.heal_multiplier;
 		
 		if (global.life > 100)
 		{

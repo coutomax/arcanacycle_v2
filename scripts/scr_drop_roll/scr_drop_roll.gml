@@ -48,6 +48,9 @@
 			
 			_drop.sprite_index	= _dropped_item.sprite;
 			_drop.description	= _dropped_item.description;
+			
+			//aplica comportamentos como flutuação, movimento após cair no chão e  etc...
+			scr_drop_behavior(_drop, _dropped_item.description)
 		}
 		else
 		{

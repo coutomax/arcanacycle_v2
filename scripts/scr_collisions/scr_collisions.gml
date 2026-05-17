@@ -36,9 +36,9 @@ function scr_collisions(inst){
 				
 				while(!place_meeting(x + _pixel_check, y, obj_wall))
 				{
-					x		+= _pixel_check;
+					x			+= _pixel_check;
 				}
-				xspd	= 0;
+				xspd		= 0;
 			}
 		}
 				
@@ -53,8 +53,8 @@ function scr_collisions(inst){
 				{
 					y			+= _pixel_check_y;
 				}
-				at_ground		= false;
-				yspd			= 0;
+				at_ground	= false;
+				yspd		= 0;
 				
 				stop_objects(inst);
 			}
@@ -66,10 +66,10 @@ function scr_collisions(inst){
 		{
 			while (place_meeting(x + xspd, y + _sub_pixel, obj_slope))
 			{
-				y		+= _sub_pixel;
+				y			+= _sub_pixel;
 			}
-			at_ground		= true;
-            yspd			= 0;
+			at_ground	= true;
+            yspd		= 0;
 		}
     }
 }
@@ -80,7 +80,8 @@ function stop_objects(inst)
 	{
 		if (inst.is_a_object)
 		{
-			inst.xspd	= 0;
+			inst.xspd			= 0;
+			inst.at_surface		= true;
 		}
 	}
 }

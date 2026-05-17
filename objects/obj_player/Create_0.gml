@@ -52,8 +52,7 @@ function movement()
 		y	  += walk_speed;
 	}
 	
-	scr_collisions(self);
-	
+	scr_collisions(self);	
 	movement_apply();
 }
 function attack () //criar subrotina pra quando houverem cartas que afetam os projéteis

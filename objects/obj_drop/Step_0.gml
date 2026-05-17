@@ -2,5 +2,7 @@ if (global.paused)
 {
 	exit;
 }
-scr_collisions(self);
+
+height_adjustment();
 movement();
+floating_drop();

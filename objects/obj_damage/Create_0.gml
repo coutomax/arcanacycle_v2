@@ -1,7 +1,7 @@
+image_alpha	= 1;
 text		= "";
 colour		= noone;
 yspd		= -2;
-image_alpha	= 1;
 
 function damage_fade ()
 {

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_drop_roll",
+  "%Name":"scr_drop_behavior",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_drop_roll",
+  "name":"scr_drop_behavior",
   "parent":{
     "name":"Drop_Controller",
     "path":"folders/Scripts/General_Controllers/Drop_Controller.yy",
