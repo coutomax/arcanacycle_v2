@@ -8,7 +8,6 @@
 
 	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos
 	
-	- Melhorar sistema para descer as rampas
 
 /*
 *
@@ -34,3 +33,5 @@
 		
 	- Corrigir problema com o movimento onde há subpixels, que está fazneo o sprite ficar - OK
 	  bugado.
+	  
+	- Melhorar sistema para descer as rampas

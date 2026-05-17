@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Wasp_Parts",
-    "path":"folders/Objects/Game_Components/Enemies/Wasp/Wasp_Parts.yy",
+    "path":"folders/Objects/Game_Components/Enemies/Wasps/Wasp_Parts.yy",
   },
   "parentObjectId":{
     "name":"obj_parts",

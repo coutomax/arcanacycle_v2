@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Projectiles",
-    "path":"folders/Assets/Game_Components/Projectiles.yy",
+    "name":"Player_Projectiles",
+    "path":"folders/Assets/Game_Components/Projectiles/Player_Projectiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

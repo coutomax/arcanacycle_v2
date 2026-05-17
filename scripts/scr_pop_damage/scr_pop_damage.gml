@@ -30,15 +30,6 @@ function scr_pop_damage(inst, target){
 					}					
 				}
 			}
-			
-			//if global.vidaMaxima - global.vida >= global.totalHeal
-			//{
-			//	dt.texto = "+" + string(global.totalHeal);
-			//} 
-			//else 
-			//{
-			//	dt.texto = "+" + string(global.vidaMaxima - global.vida);
-			//}
 		}
 	}
 }

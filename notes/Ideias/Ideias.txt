@@ -49,7 +49,7 @@
 		- Adicionar drops exclusivos para alguns inimigos. (Avaliar quais drops e quais inimigos)
 		
 	
-	- Ao morrer, abriria um puzzle para poder renascer. (se for aplciar, definir como funcionará)
+	- Ao morrer, abriria um puzzle para poder renascer/reviver. (se for aplciar, definir como funcionará)
 		- Ideia de puzzle: O jogador aparece em outra room com várias cartas aleatórias dropadas
 		e precisa sobreviver 60s pra renascer.
 
