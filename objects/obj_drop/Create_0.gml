@@ -11,6 +11,8 @@ should_move			= false; //caso algum drop ande ou se mova pela room.
 
 is_a_object			= true;
 
+description			= "";
+
 function movement ()
 {
 	x		+= round(xspd);

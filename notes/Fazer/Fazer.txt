@@ -18,19 +18,3 @@
 	- Nivelar o dano dos inimigos pra ficar jogável
 
 	- Melhorar o sistema de audio baseado na distância
-
-/*
-*
-*
-*					COISAS JÁ IMPLEMENTADAS
-*						  
-*
-*/
-
-	- Sistema para limpar os objetos na tela - OK
-
-	- Exibir o dano na tela, tanto causado quanto recebido - OK
-
-	- Colocar audio nos inimigos e nos projéteis - OK
-
-	- Adicionar som ao tomar dano - OK

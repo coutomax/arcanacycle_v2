@@ -6,16 +6,3 @@
 *
 */
 
-+ Criada tabela de loot para listar os drops
-+
-+ Criado sistema de drop
-+
-+ Recriado sistema de colisões para ter melhor controle sobre as variáveis
-+
-+ Ajustado a colisão dos objetos quando inimigos morrem, ou quando drops surgem
-+ no meio de uma platarforma
-+
-+ Corrigido problema com o movimento onde há subpixels, que está fazneo o sprite ficar
-+ bugado.
-+
-+ Criada herança para os objetos com colisão (obj_wall e obj_slope)

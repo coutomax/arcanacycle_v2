@@ -74,6 +74,4 @@ function movement_apply ()
 {
 	x			+= round(xspd);
 	y			+= round(yspd);
-	
-	show_debug_message($"{x}, {y}")
 }

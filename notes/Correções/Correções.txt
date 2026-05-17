@@ -7,6 +7,8 @@
 */
 
 	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos
+	
+	- Melhorar sistema para descer as rampas
 
 /*
 *

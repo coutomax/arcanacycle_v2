@@ -1,4 +1,4 @@
-function scr_drop_roll(drop_table) // drop_table = drop_table ou global.unic_drop_table
+  function scr_drop_roll(drop_table) // drop_table = drop_table ou global.unic_drop_table
 {
 	var _total_weigth		= 0;
 	var _dropped_item		= noone;
@@ -28,7 +28,7 @@ function scr_drop_roll(drop_table) // drop_table = drop_table ou global.unic_dro
 			{
 				if (variable_struct_exists(drop_table[i], "sprite"))
 				{
-					_dropped_item	= drop_table[i].sprite;
+					_dropped_item	= drop_table[i];
 				}
 				else
 				{
@@ -42,15 +42,16 @@ function scr_drop_roll(drop_table) // drop_table = drop_table ou global.unic_dro
 		
 	if (_dropped_item != noone)
 	{
-		if (sprite_exists(_dropped_item))
+		if (variable_struct_exists(_dropped_item, "sprite"))
 		{
 			var _drop			= instance_create_layer(round(x), round(y), "Instances", obj_dropped_item);
 			
-			_drop.sprite_index	= _dropped_item;
+			_drop.sprite_index	= _dropped_item.sprite;
+			_drop.description	= _dropped_item.description;
 		}
 		else
 		{
-			instance_create_layer(x ,y, "Instances", _dropped_item);
+			instance_create_layer(x, y, "Instances", _dropped_item);
 		}		
 	}
 }
