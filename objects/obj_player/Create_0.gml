@@ -27,7 +27,7 @@ function movement()
 	//teclas pressionadas
 	var _w_pressed			= keyboard_check( ord("W") );
 	var _a_pressed			= keyboard_check( ord("A") );
-	var _s_pressed			= keyboard_check( ord("S") );
+	var _s_pressed			= keyboard_check_pressed( ord("S") );
 	var _d_pressed			= keyboard_check( ord("D") );
 						
 	var _dir				= (_d_pressed - _a_pressed);				
@@ -45,6 +45,12 @@ function movement()
 	{
 		sprite_index		= spr_stopped_player;
 	}	
+	
+	if (_s_pressed && !at_ground)
+	{
+		at_ground = false;
+		y	  += walk_speed;
+	}
 	
 	scr_collisions(self);
 	

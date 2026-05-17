@@ -20,7 +20,14 @@ function scr_pop_damage(inst, target){
 				}
 				else
 				{
-					_popup.text		= "+" + string(global.max_life - global.life);
+					if ( global.life == global.max_life)
+					{
+						_popup.text		= "Full";
+					}
+					else
+					{
+						_popup.text		= "+" + string(global.max_life - global.life);
+					}					
 				}
 			}
 			

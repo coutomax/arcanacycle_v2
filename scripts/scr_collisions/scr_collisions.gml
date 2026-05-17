@@ -53,7 +53,7 @@ function scr_collisions(inst){
 				{
 					y			+= _pixel_check_y;
 				}
-				at_ground		= true;
+				at_ground		= false;
 				yspd			= 0;
 				
 				stop_objects(inst);
