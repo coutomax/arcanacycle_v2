@@ -1,10 +1,10 @@
-function scr_drop_behavior(inst, description){
+function drop_behavior(inst, description){
 	if(inst != noone)
 	{
 		switch (description)
 		{
 			case "life":
-				inst.should_float		= true;
+				inst.data.behavior.should_float		= true;
 			break;
 		}
 	}

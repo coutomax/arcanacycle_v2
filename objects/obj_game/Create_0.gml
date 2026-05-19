@@ -1,6 +1,6 @@
-toggle		= true;
-
 gpu_set_texfilter(false);
+
+toggle		= true;
 
 function object_cleaner ()
 {
@@ -10,3 +10,5 @@ function object_cleaner ()
 		array_delete(global.objects_list, 0, 1);
 	}
 }
+
+global.player	= instance_create_layer(768, 750, "Instances", obj_player);

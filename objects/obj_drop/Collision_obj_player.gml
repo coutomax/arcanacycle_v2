@@ -1,4 +1,4 @@
-switch (description)
+switch (data.behavior.description)
 {
 	case "nothing":
 	
@@ -6,13 +6,13 @@ switch (description)
 	
 	case "life":
 				
-		scr_pop_damage(self, other);
+		pop_damage(self, other);
 		
-		global.life			+= global.heal * global.heal_multiplier;
+		global.player.data.stats.life		+= global.heal * global.heal_multiplier;
 		
-		if (global.life > 100)
+		if (global.player.data.stats.life	 > 100)
 		{
-			global.life		= 100;
+			global.player.data.stats.life	= 100;
 		}
 		
 		audio_play_sound(snd_life, 0, false, 0.07);

@@ -1,12 +1,15 @@
-depth		= 2;
+depth	= 2;
 
-xspd		= irandom_range(-3, 3);
-yspd		= irandom_range(-2, 2);
-
-is_a_object	= true;
-
-function movement ()
+data	=
 {
-	x		+= xspd;
-	y		+= yspd;
-}
+	move	:
+	{
+		xspd		: irandom_range(-3, 3),
+		yspd		: irandom_range(-2, 2),
+	},
+	flag	:
+	{
+		is_object	: true
+	},
+	stats	: {}
+};

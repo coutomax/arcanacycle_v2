@@ -1,16 +1,13 @@
 event_inherited();
 
-xspd		= 8;
-yspd		= 8;
+data.move.xspd				= 8;
+data.move.yspd				= 8;
 
-damage		= 8 * global.damage_multiplier;
+data.stats.damage			= 8 * global.damage_multiplier;
 
-previous_xspd	= xspd;
-previous_yspd	= yspd;
-
-loop			= false;
-sound			= snd_fireball;
-sound_offset	= -1; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
-sound_loop		= false;
-play_once		= true;
-volume			= 0.015;
+data.audio.loop				= false;
+data.audio.sound			= snd_fireball;
+data.audio.sound_offset		= -1; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
+data.audio.sound_loop		= false;
+data.audio.play_once		= true;
+data.audio.volume			= 0.015;

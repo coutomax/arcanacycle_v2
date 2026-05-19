@@ -6,6 +6,9 @@
 *
 */
 
+	- Criar um script para setas as informações nos inimigos com todos os parâmetros setados
+		(isso dispensa a criação de objetos específicos para cada inimigo)
+		
 	- Colocar audio nos ataques dos inimigos
 	
 	- Colocar uma HUD para mostrar o ícone de cada carta ativa (ônus e bônus)

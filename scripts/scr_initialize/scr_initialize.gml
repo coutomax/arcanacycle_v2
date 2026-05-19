@@ -12,29 +12,33 @@ global.objects_list		= []; //lista de objetos para serem deletados
 //booleanos
 global.new_game			= true;
 global.paused			= false;
-global.in_game			= true;
 
 //numerics
 global.gravity			= .25;
 global.max_gravity		= 8;
+
+
 global.max_life			= 100;
 global.life				= 100;
-global.heal				= 25;
+global.heal				= 25; //transferir para o struct de itens de cura
 global.damage			= 5;
 global.attack_interval	= 1;
 global.jump_quantity	= 1;
 
 //Contadores para estatísticas do jogador
-global.game_over			= 0;
-global.kills				= 0;
-global.waves_cleared		= 0;
-global.life_lost			= 0;
-global.life_healed			= 0;
-global.damage_caused		= 0;
-global.damage_taken			= 0;
-global.most_damage_caused	= 0;
-global.experience			= 0;
-global.level				= 0;
+global.player_stats		=
+{
+	games_played	: 0,
+	kills			: 0,
+	waves			: 0,
+	life_lost		: 0,
+	life_healed		: 0,
+	damage_caused	: 0,
+	damage_taken	: 0,
+	experience		: 0,
+	level			: 0,
+	gold			: 0
+};
 
 //numerics para inimigos
 global.enemies			= 1;
@@ -64,7 +68,6 @@ global.drop_table	= [
 	{item: -1, sprite: noone, weigth: 3, description: "unic_drop"},//drop unico
 	{item: 0, sprite: noone, weigth: 85, description: "nothing"},//sem drop
 	{item: 1, sprite: spr_health, weigth: 1500, description: "life"}
-	
 ];
 
 //drop table global para drops com comportamentos únicos (usa objetos próprios)

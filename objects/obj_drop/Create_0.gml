@@ -1,81 +1,94 @@
 depth		= 1;
 
-xspd		= irandom_range(-2, 2);
-yspd		= irandom_range(-2, 2);
-
-default_sprite		= noone;
-
-default_drop		= true; //for um drop sem especificidades, é aqui que ele será gerado.
-float				= false; 
-should_move			= false; //caso algum drop ande ou se mova pela room.
-should_float		= false; //caso o objeto deva flutuar.
-
-is_a_object			= true;
-at_surface			= false;
-
-description			= "";
-
-amplitude			= 7;
-floating_time		= 0;
-min_speed			= 0.1;
-float_speed			= 0.05;
-friction_			= 0.98;
-base_y				= 0;
-ground_y			= -999;
+data	=
+{
+	move	:
+	{
+		xspd			: irandom_range(-2, 2),
+		yspd			: irandom_range(-2, 2),
+		base_y			: 0,
+		min_speed		: 0.1,
+		ground_y		: -999
+	},
+	physics :
+	{
+		amplitude		: 7,
+		floating_time	: 0,
+		float_speed		: 0.05,
+		friction_		: 0.98,
+	},
+	visual	:
+	{
+		default_sprite	: noone,
+	},
+	flag	:
+	{
+		at_surface		: false,
+		is_object		: true
+	},
+	behavior:
+	{
+		description		: "",
+		float			: false, 
+		should_move		: false, //caso algum drop ande ou se mova pela room.
+		should_float	: false, //caso o objeto deva flutuar.
+		default_drop	: true //for um drop sem especificidades, é aqui que ele será identificado.
+	},
+	stats	: {}
+};
 
 function floating_drop ()
 {
-	if (!at_surface)
+	if (!data.flag.at_surface)
 	{
-		scr_collisions(self);
+		collisions(self);
 	}
 	else
-		if (should_float)
+		if (data.behavior.should_float)
 		{
-			if (!float)
+			if (!data.behavior.float)
 			{
-				if (abs(xspd) < min_speed && abs(yspd) < min_speed)
+				if (abs(data.move.xspd) < data.move.min_speed && abs(data.move.yspd) < data.move.min_speed)
 				{
-					xspd	= 0;
-					yspd	= 0;
-					base_y	= y;
-					float	= true;
+					data.move.xspd		= 0;
+					data.move.yspd		= 0;
+					data.move.base_y	= y;
+					data.behavior.float	= true;
 				}
 			}
-			else
+			else 
 			{
-				floating_time	+= float_speed;
-				y = base_y - sin(floating_time) * amplitude;
+				data.physics.floating_time	+= data.physics.float_speed;
+				y = data.move.base_y - sin(data.physics.floating_time) * data.physics.amplitude;
 			}
 		}
 }
 function height_adjustment ()
 {
-	if (at_surface && should_float)
+	if (data.flag.at_surface && data.behavior.should_float)
 	{
-		if (ground_y == -999)
+		if (data.move.ground_y == -999)
 		{
-			ground_y	= y;
+			data.move.ground_y	= y;
 		}
 		
-		if (y >= ground_y - (sprite_height / 2))
+		if (y >= data.move.ground_y - (sprite_height / 2))
 		{
-			yspd	-= global.gravity;
+			data.move.yspd		-= global.gravity;
 		}
 		else
 		{
-			yspd	= 0;
+			data.move.yspd		= 0;
 		}
 	}
 }
 function movement ()
 {
-	if (float)
+	if (data.behavior.float)
 	{
-		xspd *= friction_;
-		yspd *= friction_;
+		data.move.xspd *= data.physics.friction_;
+		data.move.yspd *= data.physics.friction_;
 	}
 	
-	x		+= round(xspd);
-	y		+= round(yspd);
+	movement_apply(self);
 }

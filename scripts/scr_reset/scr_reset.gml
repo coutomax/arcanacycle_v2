@@ -4,7 +4,7 @@
 
 */
 
-function scr_reset()
+function game_reset()
 {
 	//arrays
 	global.objects_list		= []; //lista de objetos para serem deletados
@@ -12,7 +12,6 @@ function scr_reset()
 	//booleanos
 	global.new_game			= true;
 	global.paused			= false;
-	global.in_game			= true;
 
 	//numerics
 	global.gravity			= .25;

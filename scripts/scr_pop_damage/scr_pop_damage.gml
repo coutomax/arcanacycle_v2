@@ -1,32 +1,32 @@
-function scr_pop_damage(inst, target){
+function pop_damage(inst, target){
 	if (target != noone)
 	{
-		if (target.alive)
+		if (target.data.flag.alive)
 		{
 			var _popup		= instance_create_layer(target.x, target.y, "Instances", obj_damage);
 					
-			if (variable_instance_exists(inst, "damage"))
+			if (variable_struct_exists(inst.data.stats, "damage"))
 			{
-				_popup.colour	= c_red;
-				_popup.text	= "-" + string(inst.damage);
+				_popup.data.colour	= c_red;
+				_popup.data.text	= "-" + string(inst.data.stats.damage);
 			}
 			else
 			{
-				_popup.colour	= c_green;
+				_popup.data.colour	= c_green;
 				
-				if (global.max_life - global.life >= (global.heal * global.heal_multiplier))
+				if (global.player.data.stats.max_life - global.player.data.stats.life >= (global.heal * global.heal_multiplier))
 				{
-					_popup.text		= "+" + string(global.heal);
+					_popup.data.text		= "+" + string(global.heal);
 				}
 				else
 				{
-					if ( global.life == global.max_life)
+					if (global.player.data.stats.max_life == global.player.data.stats.life)
 					{
-						_popup.text		= "FULL";
+						_popup.data.text		= "FULL";
 					}
 					else
-					{
-						_popup.text		= "+" + string(global.max_life - global.life);
+					{ 
+						_popup.data.text		= "+" + string(global.player.data.stats.max_life - global.player.data.stats.life);
 					}					
 				}
 			}

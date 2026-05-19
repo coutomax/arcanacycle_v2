@@ -4,14 +4,14 @@ escalaY				= image_yscale;
 xscale				= escalaX;
 yscale				= escalaY;
 
-active				= scr_button_actions(self, actions);
+active				= button_actions(self, actions);
 
 active.on_create();
 
 #region pega os dados do layout de cada botão
 	getLayerName	= layer_get_name(self.layer);
 	selfLayer		= layer_get_flexpanel_node(getLayerName);
-	selfText		= scr_flexpanel_text_finder(selfLayer, $"fp_{actions}");
+	selfText		= flexpanel_text_finder(selfLayer, $"fp_{actions}");
 #endregion
 
 #region reseta o botão

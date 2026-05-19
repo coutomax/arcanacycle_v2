@@ -1,4 +1,4 @@
-function scr_button_actions(obj, actions){
+function button_actions(obj, actions){
 	var _a	=
 	{
 		
@@ -19,7 +19,6 @@ function scr_button_actions(obj, actions){
 					layer_set_visible("ui_start_menu", false);
 					layer_set_visible("ui_game_over", false);
 					room_goto(0);
-					global.in_game		= true;
 				break;		
 				
 				case	"settings":

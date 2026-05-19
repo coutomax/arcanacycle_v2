@@ -1,11 +1,16 @@
 image_alpha	= 1;
-text		= "";
-colour		= noone;
-yspd		= -2;
+
+data		=
+{
+	text		: "",
+	colour		: noone,
+	yspd		: -2
+};
+
 
 function damage_fade ()
 {
-	y			+= yspd;	
+	y			+= data.yspd;	
 	image_alpha	-= 0.02;
 	
 	if (image_alpha <= 0)

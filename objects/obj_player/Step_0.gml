@@ -1,22 +1,21 @@
 if (global.paused)
 {
 	image_speed		= 0;
-	xspd			= 0;
-	yspd			= 0;
 	exit;
 }
 
 image_speed			= 1;
 
-if (global.life > 0)
+if (global.player.data.stats.life > 0)
 {
 	movement();
-	scr_jump(self);
-	attack();
+	jump(self);
+	player_attack();
 }
 else
 {
+	data.move.xspd = 0;
 	sprite_index	= spr_dead_player;
-	movement_apply();
-	scr_collisions(self);
+	movement_apply(self);
+	collisions(self);
 }

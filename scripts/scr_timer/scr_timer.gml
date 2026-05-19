@@ -1,4 +1,4 @@
-function scr_timer(seconds){
+function timer(seconds){
 	
 	var _steps	= seconds * room_speed;
 	

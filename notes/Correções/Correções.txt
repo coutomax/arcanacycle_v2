@@ -6,7 +6,10 @@
 *
 */
 
-	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos
+	- Criar state machine para os objetos existentes.
+		- usar struct FSM e ver melhor sobre HSM
+	
+	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos.
 	
 
 /*

@@ -5,6 +5,10 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	- Testar movimento senoidal nos inimigos voadores
+	
+	- Mudar o background: remover as núvens e colocá-las como objetos se mexendo no fundo.
+
 	- Fazer com que alguns inimigos aleatóriamente desviem dos projéteis
 	
 	- Avaliar se faz o player e os inimigos piscarem ao tomar dano
@@ -15,7 +19,9 @@
 		- Criar uma poção com status aleatório (Pode curar, dar dano, 
 		  envenenar, deixar lento, inverte os controles por um tempo)
 		- Criar poções no geral com os status acima e outros mais.
-		- 
+		- Criar uma faca ou adaga que lança pros lados (mas não substitui o projétil)
+		- Adicionar um baú que solta moedas (usadas pra liberar upgrades permanentes)
+		- Adicionar drops exclusivos para alguns inimigos. (Avaliar quais drops e quais inimigos)
 	
 	- Criar mais inimigos
 		- Vespa diferente que atira ferrão;
@@ -43,18 +49,16 @@
 		- Adicionar carta que gere uma bolha ou escudo ao redor do player.
 		- Adicionar carta que permita vampirismo (recuperar vida com base no dano causado).
 		- Adicionar uma carta que invoque um ajudante para curar e/ou atacar.
-		
-	- Criar mais drops
-		- Adicionar um baú que solta moedas (usadas pra liberar upgrades permanentes)
-		- Adicionar drops exclusivos para alguns inimigos. (Avaliar quais drops e quais inimigos)
-		
+		- Adicionar carta que atira automaticamente.
+		- Adicionar carta para inimigos começarem a dropar cura.
+			- Adicionar opção de melhorar essa cura (aí dropa itens melhores de cura).
 	
 	- Ao morrer, abriria um puzzle para poder renascer/reviver. (se for aplciar, definir como funcionará)
 		- Ideia de puzzle: O jogador aparece em outra room com várias cartas aleatórias dropadas
 		e precisa sobreviver 60s pra renascer.
 
 	- Adicionar algum projétil onde a gravidade é aplicada.
-
+ 
 	- Adicionar o global.audio_multiplier ao audio pra usar nas configurações.
 
 	- Adicionar um botão expansor para mostrar as estatísticas da rodada ou do jogo.

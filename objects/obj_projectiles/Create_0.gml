@@ -1,38 +1,45 @@
-depth		= 1;
+depth	= 1;
 
-duration	= 0;
-damage		= 0;
-
-xspd		= 0;
-yspd		= 0;
-
-target		= noone;
-
-custom_speed	= false;
-
-loop			= noone;
-sound			= noone;
-sound_offset	= 0; // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
-sound_loop		= false;
-play_once		= false;
-volume			= 0;
+data	=
+{
+	move	:
+	{
+		xspd			: 0,
+		yspd			: 0,
+		custom_speed	: false,
+	},
+	stats	:
+	{
+		duration		: 0,
+		damage			: 0,
+		target			: noone,
+	},
+	audio	:
+	{
+		volume			: 0,
+		sound_offset	: 0, // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
+		loop			: noone,
+		sound			: noone,
+		sound_loop		: false,
+		play_once		: false,
+	}
+};
 
 function movement ()
 {
-	if (!custom_speed)
+	if (!data.move.custom_speed)
 	{
-		x	+= xspd;
-		y	+= yspd;
+		movement_apply(self);
 	}
 }
 function play_audio ()
 {
-	if (sound != noone)
+	if (data.audio.sound != noone)
 	{
-		if (play_once)
+		if (data.audio.play_once)
 		{
-			play_once		= !play_once;
-			audio_play_sound(sound, 0, sound_loop, volume);
+			data.audio.play_once		= !data.audio.play_once;
+			audio_play_sound(data.audio.sound, 0, data.audio.sound_loop, data.audio.volume);
 		}
 	}
 }

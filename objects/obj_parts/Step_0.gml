@@ -4,5 +4,5 @@ if (global.paused)
 }
 
 
-scr_collisions(self);
-movement();
+collisions(self);
+movement_apply(self);

@@ -3,9 +3,9 @@ if (global.paused)
 	exit;
 }
 
-if (global.life < 0)
+if (global.player.data.stats.life < 0)
 {
-	global.life					= 0;
+	global.player.data.stats.life			= 0;
 	
 	if (toggle)
 	{

@@ -1,4 +1,4 @@
-  function scr_drop_roll(drop_table) // drop_table = drop_table ou global.unic_drop_table
+  function drop_roll(drop_table) // drop_table = drop_table ou global.unic_drop_table
 {
 	var _total_weigth		= 0;
 	var _dropped_item		= noone;
@@ -22,7 +22,7 @@
 			
 			if (drop_table[i].item == -1) //caiu um drop unico
 			{
-				scr_drop_roll(global.unic_drop_table);
+				drop_roll(global.unic_drop_table);
 			}
 			else //drop comum
 			{
@@ -46,11 +46,11 @@
 		{
 			var _drop			= instance_create_layer(round(x), round(y), "Instances", obj_dropped_item);
 			
-			_drop.sprite_index	= _dropped_item.sprite;
-			_drop.description	= _dropped_item.description;
+			_drop.sprite_index				= _dropped_item.sprite;
+			_drop.data.behavior.description	= _dropped_item.description;
 			
 			//aplica comportamentos como flutuação, movimento após cair no chão e  etc...
-			scr_drop_behavior(_drop, _dropped_item.description)
+			drop_behavior(_drop, _dropped_item.description)
 		}
 		else
 		{

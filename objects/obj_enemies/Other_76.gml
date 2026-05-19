@@ -5,18 +5,18 @@ if (_instance_id == id)
 	switch (event_data[? "message"])
 	{
 		case "hit":
-			if (global.life > 0)
+			if (global.player.data.stats.life > 0)
 			{
-				global.life		-= damage;
-				scr_pop_damage(self, obj_player);
+				global.player.data.stats.life		-= data.stats.damage;
+				pop_damage(self, global.player);
 				audio_play_sound(snd_damage_taken, 0, false, 0.03);
-				attack_cd.update();
+				data.attack.attack_cd.update();
 			}
-			attack_cd.update();
+			data.attack.attack_cd.update();
 		break;
 	
 		case "reset":
-			sprite_index	= idle_sprite;
+			sprite_index	= data.visual.idle_sprite;
 		break;
 	}
 }

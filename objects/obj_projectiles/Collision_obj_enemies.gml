@@ -1,7 +1,7 @@
-if (other.alive)
+if (other.data.flag.alive)
 {
-	other.life -= damage;
+	other.data.stats.life -= data.stats.damage;
 	instance_destroy(self);
 }
 
-scr_pop_damage(self, other);
+pop_damage(self, other);

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_setup",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_setup",
+  "parent":{
+    "name":"Object_Config",
+    "path":"folders/Scripts/General_Controllers/Object_Config.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
