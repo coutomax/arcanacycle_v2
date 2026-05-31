@@ -1,7 +1,6 @@
 function collisions(inst){
 	with (inst)
     {
-		data.move.yspd			+= global.gravity;
 		var _pixel_check_x		= sign(data.move.xspd);
 		var _pixel_check_y		= sign(data.move.yspd);
 		var _sub_pixel			= .5;
@@ -13,7 +12,8 @@ function collisions(inst){
             {
                 y			+= _pixel_check_y;
             }
-            data.flag.grounded		= true;
+            data.flag.on_ground		= true;
+			data.flag.at_surface	= false;
             data.move.yspd			= 0;
 			
 			stop_objects(inst);
@@ -53,8 +53,9 @@ function collisions(inst){
 				{
 					y			+= _pixel_check_y;
 				}
-				data.flag.grounded	= false;
-				data.move.yspd		= 0;
+				data.flag.on_ground		= false;
+				data.flag.at_surface	= true;
+				data.move.yspd			= 0;
 				
 				stop_objects(inst);
 			}
@@ -68,8 +69,9 @@ function collisions(inst){
 			{
 				y			+= _sub_pixel;
 			}
-			data.flag.grounded	= true;
-            data.move.yspd		= 0;
+			data.flag.on_ground		= true;
+			data.flag.at_surface	= false;
+            data.move.yspd			= 0;
 		}
     }
 }

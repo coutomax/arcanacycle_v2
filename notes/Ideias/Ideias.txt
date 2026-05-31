@@ -5,6 +5,8 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	- Avaliar se coloco um estado Hurt para quando o player toma dano
+
 	- Testar movimento senoidal nos inimigos voadores
 	
 	- Mudar o background: remover as núvens e colocá-las como objetos se mexendo no fundo.

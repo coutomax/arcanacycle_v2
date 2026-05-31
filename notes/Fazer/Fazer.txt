@@ -5,6 +5,12 @@
 *						  
 *
 */
+	
+	- Limitar os dashs a cada ciclo de stamina
+
+	- Adicionar um contador para o timer do dash, para o player saber quando tá disponível
+
+	- Ajustar como é feito o redimensionamento da tela no obj_controller
 
 	- Criar um script para setas as informações nos inimigos com todos os parâmetros setados
 		(isso dispensa a criação de objetos específicos para cada inimigo)

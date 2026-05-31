@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_stopped_player",
-    "path":"sprites/spr_stopped_player/spr_stopped_player.yy",
+    "name":"spr_idle_player",
+    "path":"sprites/spr_idle_player/spr_idle_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,

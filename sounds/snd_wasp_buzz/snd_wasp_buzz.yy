@@ -10,7 +10,7 @@
   "compression":3,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.7840135,
+  "duration":1.521542,
   "exportDir":"",
   "name":"snd_wasp_buzz",
   "parent":{

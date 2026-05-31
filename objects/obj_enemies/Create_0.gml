@@ -1,6 +1,8 @@
-depth		= 2;
+depth			= 2;
 
-data		=
+toggle_parts	= true;
+
+data			=
 {
 	stats	:
 	{
@@ -43,6 +45,7 @@ data		=
 		pursue				: false,
 		semi_pursue			: false,
 		rotate_after_die	: false,
+		at_surface			: false,
 		is_object			: false
 	},
 	on_die	:
@@ -52,8 +55,6 @@ data		=
 		create_on_die		: []
 	}	
 };
-
-toggle_parts	= true;
 
 function chaser ()
 {

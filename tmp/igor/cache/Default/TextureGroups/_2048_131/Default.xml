@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_0.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_1.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="1024" texheight="1024">default_2.bz2</texture>
+  <tpe x="2" y="2" tpage="default_0.bz2">spr_background_Arcana_cycle_v2_38a91915-ff48-4651-a3da-54ed7478dc2c.tpe</tpe>
+  <tpe x="4" y="4" tpage="default_1.bz2">ts_platforms_32x32_Arcana_cycle_v2_output_tileset.tpe</tpe>
+  <tpe x="2" y="0" tpage="default_2.bz2">spr_tileset_32x32_Arcana_cycle_v2_aea3af19-9637-451d-9a37-0e20ae9b79b4.tpe</tpe>
+  <tpe x="4" y="1088" tpage="default_0.bz2">ts_platforms_Arcana_cycle_v2_output_tileset.tpe</tpe>
+  <tpe x="630" y="1086" tpage="default_0.bz2">spr_tileset_Arcana_cycle_v2_736cf166-1baf-4b97-9f7e-a45fa4dacda7.tpe</tpe>
+  <tpe x="1114" y="1086" tpage="default_0.bz2">spr_broken_hp_bar_Arcana_cycle_v2_746979df-f89e-4c2b-b318-05028eb0b809.tpe</tpe>
+  <tpe x="1114" y="1228" tpage="default_0.bz2">spr_hp_bar_Arcana_cycle_v2_3b4ca7fb-a49c-4397-b12b-1dc0422870ad.tpe</tpe>
+  <tpe x="1748" y="1086" tpage="default_0.bz2">main_font_Arcana_cycle_v2_main_font.tpe</tpe>
+  <tpe x="630" y="1602" tpage="default_0.bz2">pixel_font_Arcana_cycle_v2_pixel_font.tpe</tpe>
+  <tpe x="1114" y="1370" tpage="default_0.bz2">spr_background_bar_Arcana_cycle_v2_b8961559-1f0f-4565-8017-0d52cc8ba579.tpe</tpe>
+  <tpe x="890" y="1602" tpage="default_0.bz2">spr_hp_filler_Arcana_cycle_v2_a3543393-250c-4171-b459-3c6947c9d0f7.tpe</tpe>
+  <tpe x="1748" y="1346" tpage="default_0.bz2">spr_blank_button_Arcana_cycle_v2_2899a945-e237-40fa-a6d3-9a67cad3d0fd.tpe</tpe>
+  <tpe x="890" y="1630" tpage="default_0.bz2">spr_blank_button_Arcana_cycle_v2_1d4495db-f31c-45ed-8fe6-d2474efb5c59.tpe</tpe>
+  <tpe x="1926" y="2" tpage="default_0.bz2">spr_panel_Arcana_cycle_v2_b24da27c-35d6-4ff6-a1e8-0a95151b4ce2.tpe</tpe>
+  <tpe x="1882" y="1346" tpage="default_0.bz2">spr_test_Arcana_cycle_v2_e68f3c9e-be44-4352-9e51-d1d53d403611.tpe</tpe>
+  <tpe x="1574" y="1370" tpage="default_0.bz2">spr_test_slop_Arcana_cycle_v2_e68f3c9e-be44-4352-9e51-d1d53d403611.tpe</tpe>
+  <tpe x="2008" y="86" tpage="default_0.bz2">spr_black_wasp_attack_Arcana_cycle_v2_489e2964-2fd8-4a86-9aa4-72b0aee44a97.tpe</tpe>
+  <tpe x="2010" y="2" tpage="default_0.bz2">spr_black_wasp_attack_Arcana_cycle_v2_8e92aed8-bc3a-409e-b25b-d3a95ce7927f.tpe</tpe>
+  <tpe x="1024" y="1630" tpage="default_0.bz2">spr_dash_Arcana_cycle_v2_4e493727-8c92-4da0-b000-83588396c953.tpe</tpe>
+  <tpe x="2010" y="2" tpage="default_0.bz2">spr_dead_black_wasp_Arcana_cycle_v2_0980c06d-beef-4c72-acb5-ab3d65eaa7a8.tpe</tpe>
+  <tpe x="2008" y="86" tpage="default_0.bz2">spr_dead_black_wasp_Arcana_cycle_v2_64cc2d95-b1f7-4b80-9281-857e0b3cc107.tpe</tpe>
+  <tpe x="1950" y="1346" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_26626db9-03a7-4572-a14c-2f9b1ef4b3b5.tpe</tpe>
+  <tpe x="1950" y="1346" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_972a21e9-c0bb-46e8-85f0-5f941f240b8b.tpe</tpe>
+  <tpe x="1882" y="1414" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_a81f7684-f741-4402-b5bb-be027fe36d89.tpe</tpe>
+  <tpe x="1882" y="1414" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_f2a60755-f97c-4ec1-81aa-68d9dbb75231.tpe</tpe>
+  <tpe x="1642" y="1370" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_f4c154bb-18f3-4ac1-bd8a-ca0407145cbe.tpe</tpe>
+  <tpe x="1350" y="1398" tpage="default_0.bz2">spr_black_wasp_Arcana_cycle_v2_98c84e5f-736a-4800-a234-c714f2451991.tpe</tpe>
+  <tpe x="1024" y="1666" tpage="default_0.bz2">spr_black_wasp_Arcana_cycle_v2_e8c6791d-a810-4355-993a-b1ed30075d7f.tpe</tpe>
+  <tpe x="1060" y="1630" tpage="default_0.bz2">spr_black_wasp_attack_Arcana_cycle_v2_489b402b-8baf-4c23-8da2-16c47613c98b.tpe</tpe>
+  <tpe x="2008" y="122" tpage="default_0.bz2">spr_black_wasp_attack_Arcana_cycle_v2_db1f97e0-d6a1-4fdb-b38b-03357d9d4b2e.tpe</tpe>
+  <tpe x="1024" y="1666" tpage="default_0.bz2">spr_black_wasp_attack_Arcana_cycle_v2_fefb164b-66b7-49c2-8a55-df620904d75e.tpe</tpe>
+  <tpe x="1060" y="1630" tpage="default_0.bz2">spr_dead_black_wasp_Arcana_cycle_v2_5123b04d-ad54-416e-a30c-c5dc67acbd83.tpe</tpe>
+  <tpe x="1024" y="1666" tpage="default_0.bz2">spr_dead_black_wasp_Arcana_cycle_v2_7fa4635b-cbb7-4d50-8452-d929bde4a27e.tpe</tpe>
+  <tpe x="2008" y="122" tpage="default_0.bz2">spr_dead_black_wasp_Arcana_cycle_v2_86b005d6-e74b-4270-9abb-7248b1d4e7b1.tpe</tpe>
+  <tpe x="1926" y="86" tpage="default_0.bz2">spr_dead_player_Arcana_cycle_v2_1ee1ecb1-2461-45b7-8487-f6167994bebd.tpe</tpe>
+  <tpe x="2010" y="38" tpage="default_0.bz2">spr_fireball_1_Arcana_cycle_v2_9087fe58-67d1-4f35-a24c-c327d6789375.tpe</tpe>
+  <tpe x="1986" y="1346" tpage="default_0.bz2">spr_fireball_1_Arcana_cycle_v2_f689744c-3a40-44b0-a6ea-3de3145aab8f.tpe</tpe>
+  <tpe x="1950" y="1382" tpage="default_0.bz2">spr_health_Arcana_cycle_v2_7266e827-3079-4041-9f63-d2c87afcb596.tpe</tpe>
+  <tpe x="1642" y="1430" tpage="default_0.bz2">spr_idle_player_Arcana_cycle_v2_21c5f355-68fa-43b8-bf5b-941ae5d10823.tpe</tpe>
+  <tpe x="1642" y="1430" tpage="default_0.bz2">spr_idle_player_Arcana_cycle_v2_27e7fbeb-d230-406d-815f-d465ac3857ac.tpe</tpe>
+  <tpe x="1642" y="1430" tpage="default_0.bz2">spr_walking_player_Arcana_cycle_v2_e85f5373-2f7f-41c9-ba81-aaa8188423e8.tpe</tpe>
+  <tpe x="1384" y="1398" tpage="default_0.bz2">spr_wasp_Arcana_cycle_v2_1c1bce47-a45b-4e33-ac3d-f0d14f903558.tpe</tpe>
+  <tpe x="1678" y="1370" tpage="default_0.bz2">spr_wasp_Arcana_cycle_v2_3a49d481-9aa8-42d1-80e4-eabbdcf2c331.tpe</tpe>
+  <tpe x="1384" y="1398" tpage="default_0.bz2">spr_wasp_attack_Arcana_cycle_v2_1102db80-9901-45d7-abe1-c05d9ca9d5c2.tpe</tpe>
+  <tpe x="1350" y="1434" tpage="default_0.bz2">spr_dead_wasp_Arcana_cycle_v2_7e736176-3d19-4284-8833-284017904865.tpe</tpe>
+  <tpe x="1114" y="1398" tpage="default_0.bz2">spr_fireball_1_Arcana_cycle_v2_6c5b8ae0-425c-4075-afaa-60082572348f.tpe</tpe>
+  <tpe x="1114" y="1398" tpage="default_0.bz2">spr_fireball_1_Arcana_cycle_v2_facf3e81-2b96-43e1-b051-c24e905a5764.tpe</tpe>
+  <tpe x="1094" y="1630" tpage="default_0.bz2">spr_idle_player_Arcana_cycle_v2_36a40474-753f-42e7-9a49-a1c0f4b727a6.tpe</tpe>
+  <tpe x="1058" y="1666" tpage="default_0.bz2">spr_idle_player_Arcana_cycle_v2_3bb7d915-7dfd-437e-abdc-6a0ca1f689ff.tpe</tpe>
+  <tpe x="1926" y="158" tpage="default_0.bz2">spr_walking_player_Arcana_cycle_v2_7acfe28c-cfc5-4a30-8967-51447dac45a6.tpe</tpe>
+  <tpe x="1024" y="1702" tpage="default_0.bz2">spr_walking_player_Arcana_cycle_v2_42cd0fa0-9bda-467c-a1a9-754f2db1184f.tpe</tpe>
+  <tpe x="1960" y="86" tpage="default_0.bz2">spr_dead_player_Arcana_cycle_v2_94ab1c74-d90c-4178-b97c-baa8480692be.tpe</tpe>
+  <tpe x="1986" y="1380" tpage="default_0.bz2">spr_idle_player_Arcana_cycle_v2_cf7451e8-0acc-400d-9430-0771e6fe13a5.tpe</tpe>
+  <tpe x="2008" y="158" tpage="default_0.bz2">spr_dead_player_Arcana_cycle_v2_f8f49db9-b1ea-4511-9382-3e721e6641d6.tpe</tpe>
+  <tpe x="1918" y="1414" tpage="default_0.bz2">spr_fireball_1_Arcana_cycle_v2_052046a9-039a-47cf-bc79-9b50fda679d9.tpe</tpe>
+  <tpe x="1676" y="1430" tpage="default_0.bz2">spr_dead_player_Arcana_cycle_v2_c05aef92-190e-4eac-83d8-db6425dd2232.tpe</tpe>
+  <tpe x="1676" y="1450" tpage="default_0.bz2">spr_dead_player_Arcana_cycle_v2_da02a885-16e3-44f6-829b-2051b0976675.tpe</tpe>
+  <tpe x="1642" y="1406" tpage="default_0.bz2">spr_wing_Arcana_cycle_v2_84038b25-1173-4cb1-a442-3429b41e92b8.tpe</tpe>
+  <tpe x="2010" y="74" tpage="default_0.bz2">spr_black_antenna_Arcana_cycle_v2_1a6b9a8d-bde4-4a7b-9db0-3f88ac968e94.tpe</tpe>
+  <tpe x="1418" y="1398" tpage="default_0.bz2">spr_left_antenna_Arcana_cycle_v2_6f95db4e-7c9f-47ba-a4bf-7e522009697b.tpe</tpe>
+  <tpe x="1384" y="1434" tpage="default_0.bz2">spr_right_antenna_Arcana_cycle_v2_828f31a0-5577-499d-8316-a4d85135db49.tpe</tpe>
+  <tpe x="2044" y="38" tpage="default_0.bz2">spr_blank_obstacle_Arcana_cycle_v2_114ad4fb-996e-4844-85e2-4e42eebef8d5.tpe</tpe>
+</TextureGroup>

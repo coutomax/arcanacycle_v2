@@ -6,11 +6,8 @@
 *
 */
 
-	- Criar state machine para os objetos existentes.
-		- usar struct FSM e ver melhor sobre HSM
-	
-	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos.
-	
+	- Adicionar gravidade em cada objeto que cai.
+		
 
 /*
 *
@@ -38,3 +35,9 @@
 	  bugado.
 	  
 	- Melhorar sistema para descer as rampas
+	
+	- Criar state machine para os objetos existentes.
+	
+	- usar struct FSM e ver melhor sobre HSM
+
+	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos.
