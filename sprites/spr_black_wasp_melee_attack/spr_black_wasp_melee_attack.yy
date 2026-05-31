@@ -1,6 +1,6 @@
 {
   "$GMSprite":"v2",
-  "%Name":"spr_black_wasp_attack",
+  "%Name":"spr_black_wasp_melee_attack",
   "bboxMode":0,
   "bbox_bottom":31,
   "bbox_left":0,
@@ -25,7 +25,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"3f763047-646e-4622-896c-ae588fbbed9e","blendMode":0,"displayName":"default","isLocked":false,"name":"3f763047-646e-4622-896c-ae588fbbed9e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_black_wasp_attack",
+  "name":"spr_black_wasp_melee_attack",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -37,7 +37,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"spr_black_wasp_attack",
+    "%Name":"spr_black_wasp_melee_attack",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -61,7 +61,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_black_wasp_attack",
+    "name":"spr_black_wasp_melee_attack",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -73,19 +73,19 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fefb164b-66b7-49c2-8a55-df620904d75e","path":"sprites/spr_black_wasp_attack/spr_black_wasp_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fefb164b-66b7-49c2-8a55-df620904d75e","path":"sprites/spr_black_wasp_melee_attack/spr_black_wasp_melee_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d60ac0a4-0ea5-4ae5-b3d7-138835a41d47","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e92aed8-bc3a-409e-b25b-d3a95ce7927f","path":"sprites/spr_black_wasp_attack/spr_black_wasp_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e92aed8-bc3a-409e-b25b-d3a95ce7927f","path":"sprites/spr_black_wasp_melee_attack/spr_black_wasp_melee_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"24680d49-f32d-4713-b78a-6064992a9cd8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"489b402b-8baf-4c23-8da2-16c47613c98b","path":"sprites/spr_black_wasp_attack/spr_black_wasp_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"489b402b-8baf-4c23-8da2-16c47613c98b","path":"sprites/spr_black_wasp_melee_attack/spr_black_wasp_melee_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e3a8a6d6-a63a-4c65-8424-8909d2e22535","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"db1f97e0-d6a1-4fdb-b38b-03357d9d4b2e","path":"sprites/spr_black_wasp_attack/spr_black_wasp_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"db1f97e0-d6a1-4fdb-b38b-03357d9d4b2e","path":"sprites/spr_black_wasp_melee_attack/spr_black_wasp_melee_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b411ddca-605d-4ac2-8a55-5f3a3c37e526","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"489e2964-2fd8-4a86-9aa4-72b0aee44a97","path":"sprites/spr_black_wasp_attack/spr_black_wasp_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"489e2964-2fd8-4a86-9aa4-72b0aee44a97","path":"sprites/spr_black_wasp_melee_attack/spr_black_wasp_melee_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"b4b9e585-f321-4a31-9d34-c83eddbcfd78","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

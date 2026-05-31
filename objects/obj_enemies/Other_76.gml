@@ -10,9 +10,7 @@ if (_instance_id == id)
 				global.player.data.stats.life		-= data.stats.damage;
 				pop_damage(self, global.player);
 				audio_play_sound(snd_damage_taken, 0, false, 0.03);
-				data.attack.attack_cd.update();
 			}
-			data.attack.attack_cd.update();
 		break;
 	
 		case "reset":

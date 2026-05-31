@@ -1,6 +1,7 @@
 depth			= 2;
 
 toggle_parts	= true;
+close_to_player	= noone;
 
 data			=
 {
@@ -19,6 +20,7 @@ data			=
 	},
 	visual	:
 	{
+		attack_index 		: 0,
 		idle_sprite			: noone,
 		attack_sprite		: noone,
 		dead_sprite			: noone
@@ -36,7 +38,7 @@ data			=
 		target_x			: 0,
 		target_y			: 0,
 		cooldown			: 0,
-		attack_cd			: 0,
+		counter				: 0,
 		custom_attack_speed	: 0
 	},
 	flag	:
@@ -56,9 +58,46 @@ data			=
 	}	
 };
 
-function chaser ()
+sm 				= new state_machine("Idle");
+
+sm.parent_run 	= function()
 {
-	if (data.flag.pursue && data.flag.alive)
+	image_speed		= 1;
+
+	if (y < yprevious)
+	{
+		data.move.y_direction		= -1;
+	}  
+	else
+	{
+		data.move.y_direction		= 1;
+	}
+
+	close_to_player	= instance_place(x - (15 * image_xscale), y + (20 * data.move.y_direction), obj_player);
+
+	if (data.attack.counter < data.attack.cooldown)
+	{
+ 		data.attack.counter++;
+	}
+
+	_enemy_sound();
+}
+
+sm.add_state("Idle",
+{
+	on_enter	: function ()
+	{
+		sprite_index	= data.visual.idle_sprite;
+	}
+});
+
+sm.add_state("Chase",
+{
+	on_enter	: function ()
+	{
+		sprite_index	= data.visual.idle_sprite;
+	},
+	on_step		: function ()
 	{
 		data.attack.target_x	= global.player.x;
 		data.attack.target_y	= global.player.y;
@@ -81,61 +120,55 @@ function chaser ()
 			}
 		}
 	}
-}
-function enemy_attack ()
+});
+
+//melee distance only
+sm.add_state("Hit",
 {
-	if (data.flag.pursue && data.flag.alive)
+	on_enter	: function ()
 	{
-		if (y < yprevious)
-		{
-			data.move.y_direction		= -1;
-		}  
-		else
-		{
-			data.move.y_direction		= 1;
-		}		
+		sprite_index	= data.visual.attack_sprite;
 		
-		var _attacker	= instance_place(x - (15 * image_xscale), y + (20 * data.move.y_direction), obj_player);
-		
-		if (_attacker != noone)
+		if (data.attack.counter >= data.attack.cooldown)
 		{
-			if	(data.attack.attack_cd.is_done() || !data.attack.attack_cd.active)
-			{
-				sprite_index			= data.visual.attack_sprite;
-				data.attack.attack_cd.start();
-			}
-			data.attack.attack_cd.update();			
+			image_index		= data.visual.attack_index;
 		}
-		else
+	},
+	on_step		: function ()
+	{
+		if (data.attack.counter >= data.attack.cooldown)
 		{
-			sprite_index				= data.visual.idle_sprite;
-			data.attack.attack_cd.update();
+			sprite_index		= data.visual.attack_sprite;
+			data.attack.counter	= 0;
 		}
 	}
-}
-function enemy_die ()
+});
+
+sm.add_state("Die",
 {
-	if (data.stats.life <= 0)
+	on_enter	: function ()
 	{
+		data.flag.alive	= false;
+
 		if (audio_is_playing(data.audio.loop))
 		{
 			audio_stop_sound(data.audio.loop);
 		}
-		
-		if (data.flag.alive)
+
+		array_push(global.objects_list, self);
+		if (data.audio.die_sound != noone)
 		{
-			array_push(global.objects_list, self);
-			if (data.audio.die_sound != noone)
-			{
-				audio_play_sound(data.audio.die_sound, 0, false, 0.07);
-			}
-			
-			drop_roll(global.drop_table);
+			audio_play_sound(data.audio.die_sound, 0, false, 0.07);
 		}
 		
-		data.flag.alive			= false;
-		sprite_index		= data.visual.dead_sprite;
-		
+		drop_roll(global.drop_table);
+
+		sprite_index	= data.visual.dead_sprite;
+	},
+	on_step		: function ()
+	{
+		data.move.yspd	+= global.gravity;
+
 		if (array_length(data.on_die.create_on_die) > 0 && toggle_parts)
 		{
 			toggle_parts	= false;
@@ -153,12 +186,47 @@ function enemy_die ()
 		{
 			image_angle		-= 5 * image_xscale;
 		}
-		
+
 		collisions(self);
-		movement_apply(self);
+
+		x 	+= data.move.xspd;
+		y 	+= data.move.yspd;
 	}
-}
-function enemy_sound ()
+});
+
+sm.add_transition("Chase", "Idle", function () {
+	return global.player.data.stats.life <= 0;
+});
+
+sm.add_transition("Idle", "Chase", function () {
+	return data.flag.pursue && data.flag.alive && global.player.data.stats.life > 0 && close_to_player == noone;
+});
+
+sm.add_transition("Chase", "Hit", function () {
+	return data.flag.pursue && data.flag.alive && close_to_player != noone && data.attack.counter >= data.attack.cooldown;
+});
+
+sm.add_transition("Hit", "Chase", function () {
+	return data.flag.pursue && data.flag.alive && close_to_player == noone;
+});
+
+sm.add_transition("Hit", "Idle", function () {
+	return global.player.data.stats.life <= 0;
+});
+
+sm.add_transition("Chase", "Die", function () {
+	return data.stats.life <= 0;
+});
+
+sm.add_transition("Hit", "Die", function () {
+	return data.stats.life <= 0;
+});
+
+sm.add_transition("Idle", "Die", function () {
+	return data.stats.life <= 0;
+});
+
+_enemy_sound = function ()
 {
 	if (data.audio.sound != noone && data.flag.alive && !audio_is_playing(data.audio.sound))
 	{	
@@ -171,8 +239,4 @@ function enemy_sound ()
 				audio_sound_loop(data.audio.loop, data.audio.sound_data);
 		}
 	}
-}
-function drop_roll ()
-{
-	
 }

@@ -86,7 +86,7 @@ sm.parent_run 	= function()
 	data.move.yspd			+= grav;
 
 	collisions(self);
-	player_attack();
+	_player_attack();
 
 	data.flag.on_ground		= place_meeting(x, y + 1, [obj_wall, obj_slope]);
 	data.flag.at_surface	= place_meeting(x, y + 1, obj_platform);
@@ -260,7 +260,7 @@ sm.add_transition("Dash", "Fall", function () {
 	return data.move.dash.dash_timer <= 0 && h_input == 0 && data.move.dash.enabled;	
 });
 
-function player_attack () //criar subrotina pra quando houverem cartas que afetam os projéteis
+_player_attack 	= function () //criar subrotina pra quando houverem cartas que afetam os projéteis
 {	
 	if (attack_input && data.attack.attack_cd.is_done())
 	{

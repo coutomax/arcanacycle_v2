@@ -4,6 +4,4 @@ if (global.paused)
 	exit;
 }
 
-image_speed			= 1;
-
 sm.update(id);
