@@ -13,3 +13,13 @@ data	=
 	},
 	stats	: {}
 };
+
+movement = function ()
+{
+	data.move.yspd	+= global.gravity;
+	
+	collisions(self);
+	
+	x				+= data.move.xspd;
+	y				+= data.move.yspd;
+}

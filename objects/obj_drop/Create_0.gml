@@ -41,6 +41,7 @@ function floating_drop ()
 {
 	if (!data.flag.at_surface)
 	{
+		data.move.yspd		+= global.gravity;
 		collisions(self);
 	}
 	else
@@ -82,6 +83,7 @@ function height_adjustment ()
 		}
 	}
 }
+
 function movement ()
 {
 	if (data.behavior.float)
@@ -90,5 +92,6 @@ function movement ()
 		data.move.yspd *= data.physics.friction_;
 	}
 	
-	movement_apply(self);
+	x			+= data.move.xspd;
+	y			+= data.move.yspd;
 }
