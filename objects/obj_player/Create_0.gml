@@ -35,7 +35,8 @@ data			=
 			spd				: 8,
 			timer_base		: 14,
 			dash_counter	: 0,
-			dash_timer		: 0
+			dash_timer		: 0,
+			cooldown		: 180
 		}
 	},	
 	attack	:
@@ -75,6 +76,11 @@ sm.parent_run 	= function()
 		{
 			image_xscale	= h_input;
 		}
+	}
+
+	if (data.move.dash.cooldown < 180)
+	{
+		data.move.dash.cooldown++;
 	}
 
 	data.move.yspd			+= grav;
@@ -125,6 +131,13 @@ sm.add_state("Jump",
 			data.move.yspd				= data.move.jump.spd;
 			data.move.jump.jump_count--;
 		}
+	},
+	on_exit	: function ()
+	{
+		if (data.flag.on_ground || data.flag.at_surface)
+		{
+			data.move.jump.jump_count = 0;
+		}
 	}
 });
 
@@ -143,7 +156,8 @@ sm.add_state("Dash",
 {
 	on_enter	: function ()
 	{
-		grav = 0;
+		grav 					= 0;
+		data.move.dash.cooldown = 0;
 		data.move.dash.active 	= true;
 		data.move.xspd 			= data.move.dash.spd * image_xscale;
 		data.move.yspd 			= 0;
@@ -231,7 +245,11 @@ sm.add_transition("Fall", "Dead", function () {
 });
 
 sm.add_transition("Jump", "Dash", function () {
-	return dash_input && data.move.dash.enabled;
+	return dash_input && data.move.dash.enabled && data.move.dash.cooldown >= 180;
+});
+
+sm.add_transition("Fall", "Dash", function () {
+	return dash_input && data.move.dash.enabled && data.move.dash.cooldown >= 180;
 });
 
 sm.add_transition("Dash", "Walk", function () {
