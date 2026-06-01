@@ -262,11 +262,11 @@ sm.add_transition("Dash", "Fall", function () {
 
 _player_attack 	= function () //criar subrotina pra quando houverem cartas que afetam os projéteis
 {	
-	if (attack_input && data.attack.attack_cd.is_done())
+	if (attack_input && data.attack.attack_cd.is_done() && data.flag.alive)
 	{
 		var _dir				= point_direction(x, y, mouse_x, mouse_y);
 		
-		var _attack				= instance_create_layer(x, y, "Instances", obj_fireball);
+		var _attack				= instance_create_layer(x + (25 * image_xscale), y - 10, "Instances", obj_fireball);
 		
 		_attack.data.move.xspd	= lengthdir_x(_attack.data.move.xspd, _dir);
 		_attack.data.move.yspd	= lengthdir_y(_attack.data.move.yspd, _dir);

@@ -9,6 +9,8 @@
 	- Adicionar gravidade em cada objeto que cai.
 	
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.
+	
+	- Corrigir inimigos atravessando o obj_wall, pois quando morrem deixam drops debaixo do chão
 
 /*
 *
