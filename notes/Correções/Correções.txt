@@ -6,7 +6,7 @@
 *
 */
 
-	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás, parece ficar fora do ângulo (mas é só visual)
+	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás o projétil não vai até o cursor
 
 	- Adicionar gravidade em cada objeto que cai.
 	

@@ -130,7 +130,7 @@ sm.add_state("Chase",
 			{
 				data.move.yspd 		= 0;
 			}			
-
+			
 			if (data.move.xspd != 0)
 			{
 				image_xscale	= -sign(data.move.xspd);

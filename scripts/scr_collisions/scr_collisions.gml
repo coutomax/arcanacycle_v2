@@ -45,7 +45,7 @@ function collisions(inst){
 		//colisão com plataformas
 		var _platform			= instance_place(x + data.move.xspd, y + data.move.yspd, obj_platform);
  
-		if (_platform != noone)
+		if (_platform != noone && !object_is_ancestor(object_index, obj_enemies))
 		{
 			if place_meeting(x, y + data.move.yspd, _platform) && data.move.yspd > 0 && bbox_bottom <= _platform.bbox_top + 1 //colide com a parte de cima da _platform e para de cair
 			{
