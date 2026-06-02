@@ -12,8 +12,6 @@
 	
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.
 	
-	- Corrigir inimigos atravessando o obj_wall, pois quando morrem deixam drops debaixo do chão
-
 /*
 *
 *
@@ -46,3 +44,5 @@
 	- usar struct FSM e ver melhor sobre HSM
 
 	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos.
+
+	- Corrigir inimigos atravessando o obj_wall, pois quando morrem deixam drops debaixo do chão

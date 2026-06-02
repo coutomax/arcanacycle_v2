@@ -1,4 +1,4 @@
-vscdepth			= 2;
+depth			= 2;
 
 toggle_parts	= true;
 close_to_player	= noone;
@@ -73,7 +73,13 @@ sm.parent_run 	= function()
 		data.move.y_direction		= 1;
 	}
 
-	close_to_player	= instance_place(x - (15 * image_xscale), y + (20 * data.move.y_direction), obj_player);
+	close_to_player	= instance_place(x - (5 * image_xscale), y + (5 * data.move.y_direction), obj_player);
+
+	if(close_to_player != noone && data.flag.alive)
+	{
+		data.move.xspd		= 0;
+		data.move.yspd		= 0;
+	}
 
 	if (data.attack.counter < data.attack.cooldown)
 	{
@@ -84,8 +90,8 @@ sm.parent_run 	= function()
 
 	collisions(self);
 
-	x += data.move.xspd;
-	y += data.move.yspd;
+	x 			+= data.move.xspd;
+	y 			+= data.move.yspd;
 }
 
 sm.add_state("Idle",
@@ -110,27 +116,31 @@ sm.add_state("Chase",
 			{
 				return;
 			}
-			data.attack.target_x	= sign(global.player.x - x);
-			data.attack.target_y	= sign(global.player.y - y);
+			
+			var _dx 			 	= global.player.x - x;
+			var _dy			 		= global.player.y - y;
 
-			if (x != global.player.x && (x + (15 * image_xscale) < global.player.x || x - (15 * image_xscale) > global.player.x))
+			data.attack.target_x	= sign(_dx);
+			data.attack.target_y	= sign(_dy);
+
+			if (abs(_dx) > 15 * abs(image_xscale))
 			{
 				data.move.xspd		= lerp(data.move.xspd, data.attack.target_x * data.move.total_speed, 0.1);
 			}
 			else
 			{
-				data.move.xspd 		= 0;
+				//data.move.xspd 		= 0;
 			}
-			
-			if (y != global.player.y && (y + (15 * image_yscale) < global.player.y || y - (15 * image_yscale) > global.player.y))
+
+			if (abs(_dy) > 15 * abs(image_yscale))
 			{
 				data.move.yspd		= lerp(data.move.yspd, data.attack.target_y * data.move.total_speed, 0.1);
 			}
 			else
 			{
-				data.move.yspd 		= 0;
+				//data.move.yspd 		= 0;
 			}			
-			
+
 			if (data.move.xspd != 0)
 			{
 				image_xscale	= -sign(data.move.xspd);
@@ -144,11 +154,11 @@ sm.add_state("Hit",
 {
 	on_enter	: function ()
 	{
-		sprite_index	= data.visual.attack_sprite;
+		sprite_index			= data.visual.attack_sprite;
 		
 		if (data.attack.counter >= data.attack.cooldown)
 		{
-			image_index		= data.visual.attack_index;
+			image_index			= data.visual.attack_index;
 		}
 	},
 	on_step		: function ()
@@ -165,7 +175,7 @@ sm.add_state("Die",
 {
 	on_enter	: function ()
 	{
-		data.flag.alive	= false;
+		data.flag.alive		= false;
 
 		if (audio_is_playing(data.audio.loop))
 		{
@@ -180,20 +190,20 @@ sm.add_state("Die",
 		
 		drop_roll(global.drop_table);
 
-		sprite_index	= data.visual.dead_sprite;
+		sprite_index		= data.visual.dead_sprite;
 	},
 	on_step		: function ()
 	{
-		data.move.yspd	+= global.gravity;
+		data.move.yspd		+= global.gravity;
 
 		if (array_length(data.on_die.create_on_die) > 0 && toggle_parts)
 		{
 			toggle_parts	= false;
 			for (var i = 0; i < array_length(data.on_die.create_on_die); i++)
 			{
-				var _dead_parts		= instance_create_layer(x, y, "Instances", obj_parts);
+				var _dead_parts				= instance_create_layer(x, y, "Instances", obj_parts);
 					
-				_dead_parts.sprite_index		= data.on_die.create_on_die[i];
+				_dead_parts.sprite_index	= data.on_die.create_on_die[i];
 				
 				array_push(global.objects_list, _dead_parts);
 			}
@@ -204,7 +214,7 @@ sm.add_state("Die",
 			image_angle		-= 5 * image_xscale;
 		}
 
-		data.move.xspd	= 0;
+		data.move.xspd		= 0;
 	}
 });
 
