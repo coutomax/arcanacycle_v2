@@ -6,6 +6,8 @@
 *
 */
 
+	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás, parece ficar fora do ângulo (mas é só visual)
+
 	- Adicionar gravidade em cada objeto que cai.
 	
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.

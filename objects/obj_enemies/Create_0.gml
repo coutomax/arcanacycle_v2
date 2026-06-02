@@ -1,4 +1,4 @@
-depth			= 2;
+vscdepth			= 2;
 
 toggle_parts	= true;
 close_to_player	= noone;
@@ -81,6 +81,11 @@ sm.parent_run 	= function()
 	}
 
 	_enemy_sound();
+
+	collisions(self);
+
+	x += data.move.xspd;
+	y += data.move.yspd;
 }
 
 sm.add_state("Idle",
@@ -99,25 +104,33 @@ sm.add_state("Chase",
 	},
 	on_step		: function ()
 	{
-		data.attack.target_x	= global.player.x;
-		data.attack.target_y	= global.player.y;
-		
-		if (data.flag.alive)
+		if (data.flag.alive && instance_exists(obj_player))
 		{
-			var _dir			= point_direction(x, y, data.attack.target_x, data.attack.target_y);
-			
-			mp_potential_step(data.attack.target_x, data.attack.target_y, data.move.total_speed, false);
-			
-			direction	= _dir;
-			
-			if (direction > 90 && direction < 270)
+			if (global.player.data.stats.life <= 0)
 			{
-				image_xscale	= 1;
+				return;
+			}
+			data.attack.target_x	= sign(global.player.x - x);
+			data.attack.target_y	= sign(global.player.y - y);
+
+			if (x != global.player.x && (x + (15 * image_xscale) < global.player.x || x - (15 * image_xscale) > global.player.x))
+			{
+				data.move.xspd		= lerp(data.move.xspd, data.attack.target_x * data.move.total_speed, 0.1);
 			}
 			else
 			{
-				image_xscale	= -1;
+				data.move.xspd 		= 0;
+
 			}
+
+			data.move.yspd		= lerp(data.move.yspd, data.attack.target_y * data.move.total_speed, 0.1);
+
+			if (data.move.xspd != 0)
+			{
+				image_xscale	= -sign(data.move.xspd);
+			}
+
+			//collisions(self);
 		}
 	}
 });
@@ -187,10 +200,7 @@ sm.add_state("Die",
 			image_angle		-= 5 * image_xscale;
 		}
 
-		collisions(self);
-
-		x 	+= data.move.xspd;
-		y 	+= data.move.yspd;
+		data.move.xspd	= 0;
 	}
 });
 

@@ -1,0 +1,7 @@
+{
+    "stitch.gameMaker.disableGameMakerUpdatePrompt": false,
+    "stitch.editing.autocomplete.ignoredPrefix": "",
+    "stitch.run.defaultCompiler": "YYC",
+    "stitch.run.defaultConfig": "Default",
+    "stitch.run.inTerminal": true
+}

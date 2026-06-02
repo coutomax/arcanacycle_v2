@@ -162,7 +162,7 @@ sm.add_state("Dash",
 		data.move.xspd 			= data.move.dash.spd * image_xscale;
 		data.move.yspd 			= 0;
 
-		var dash_instance 		= instance_create_layer(x, y, "Instances", obj_dash);
+		var dash_instance 		= instance_create_layer(x - (15 * image_xscale), y, "Instances", obj_dash);
 
 		dash_instance.image_xscale = image_xscale * -1;
 	},
