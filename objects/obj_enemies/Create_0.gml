@@ -120,17 +120,21 @@ sm.add_state("Chase",
 			else
 			{
 				data.move.xspd 		= 0;
-
 			}
-
-			data.move.yspd		= lerp(data.move.yspd, data.attack.target_y * data.move.total_speed, 0.1);
+			
+			if (y != global.player.y && (y + (15 * image_yscale) < global.player.y || y - (15 * image_yscale) > global.player.y))
+			{
+				data.move.yspd		= lerp(data.move.yspd, data.attack.target_y * data.move.total_speed, 0.1);
+			}
+			else
+			{
+				data.move.yspd 		= 0;
+			}			
 
 			if (data.move.xspd != 0)
 			{
 				image_xscale	= -sign(data.move.xspd);
 			}
-
-			//collisions(self);
 		}
 	}
 });
