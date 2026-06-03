@@ -85,11 +85,13 @@ sm.parent_run 	= function()
 
 	data.move.yspd			+= grav;
 
+	data.flag.on_ground		= place_meeting(x, y + 1, [obj_wall, obj_slope]);
+	data.flag.at_surface	= place_meeting(x, y + 1, obj_platform);
+
 	collisions(self);
 	_player_attack();
 
-	data.flag.on_ground		= place_meeting(x, y + 1, [obj_wall, obj_slope]);
-	data.flag.at_surface	= place_meeting(x, y + 1, obj_platform);
+	
 
 	x += data.move.xspd;
 	y += data.move.yspd;
@@ -264,9 +266,8 @@ _player_attack 	= function () //criar subrotina pra quando houverem cartas que a
 {	
 	if (attack_input && data.attack.attack_cd.is_done() && data.flag.alive)
 	{
-		var _dir				= point_direction(x, y, mouse_x, mouse_y);
-		
-		var _attack				= instance_create_layer(x + (25 * image_xscale), y - 10, "Instances", obj_fireball);
+		var _dir				= point_direction(x, y, mouse_x, mouse_y);		
+		var _attack				= instance_create_layer(x + (5 * image_xscale), y - 10, "Instances", obj_fireball);
 		
 		_attack.data.move.xspd	= lengthdir_x(_attack.data.move.xspd, _dir);
 		_attack.data.move.yspd	= lengthdir_y(_attack.data.move.yspd, _dir);

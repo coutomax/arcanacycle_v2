@@ -5,10 +5,7 @@
 *						   (AJUSTAR EM ORDEM)
 *
 */
-
 	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás o projétil não vai até o cursor
-
-	- Adicionar gravidade em cada objeto que cai.
 	
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.
 	
@@ -46,3 +43,9 @@
 	- Melhorar sistema de subpixels, os pixels ainda estão ficando um pouco distorcidos.
 
 	- Corrigir inimigos atravessando o obj_wall, pois quando morrem deixam drops debaixo do chão
+
+	- Corrigir problema que impede de pular ao descer/ subir uma rampa
+
+	- No spawn do jogador, ao atirar o obj_projectiles está sendo destruído instantaneamente.
+
+	- Adicionar gravidade em cada objeto que cai.

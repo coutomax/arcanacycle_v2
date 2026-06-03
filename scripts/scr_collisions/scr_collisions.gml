@@ -20,7 +20,7 @@ function collisions(inst){
         }
 		
 		// colisão horizontal		
-		if (place_meeting(x + data.move.xspd, y, obj_wall))
+		if (place_meeting(x + data.move.xspd, y + data.move.yspd, obj_wall))
 		{
 			//checa se é um slope
 			if (!place_meeting(x + data.move.xspd, y - abs(data.move.xspd) - 1, obj_wall))
@@ -62,10 +62,10 @@ function collisions(inst){
 		}
 				
 		//colisão com rampas (descendo)
-		if (data.move.yspd >= 0 && !place_meeting(x + data.move.xspd, y + 1, obj_slope) 
-			&& place_meeting(x + data.move.xspd, y + abs(data.move.xspd) + 1, obj_slope))
+		if (data.move.yspd >= 0 && !place_meeting(x + data.move.xspd, y + 1, obj_wall) 
+			&& place_meeting(x + data.move.xspd, y + abs(data.move.xspd) + 1, obj_wall))
 		{
-			while (place_meeting(x + data.move.xspd, y + _sub_pixel, obj_slope))
+			while (place_meeting(x + data.move.xspd, y + _sub_pixel, obj_wall))
 			{
 				y			+= _sub_pixel;
 			}
