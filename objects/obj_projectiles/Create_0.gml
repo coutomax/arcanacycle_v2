@@ -29,7 +29,8 @@ function movement ()
 {
 	if (!data.move.custom_speed)
 	{
-		movement_apply(self);
+		x		+= data.move.xspd;
+		y		+= data.move.yspd;
 	}
 }
 function play_audio ()

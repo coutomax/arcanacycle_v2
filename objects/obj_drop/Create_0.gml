@@ -1,6 +1,9 @@
-depth		= 1;
+depth			= 1;
 
-data	=
+on_ground	 	= noone;
+on_surface	 	= noone;
+
+data			=
 {
 	move	:
 	{
@@ -92,6 +95,14 @@ function movement ()
 		data.move.yspd *= data.physics.friction_;
 	}
 	
+	on_ground	 	= place_meeting(x, y + 1, obj_wall);
+	on_surface	 	= place_meeting(x, y + 1, obj_platform);
+
+	if (on_ground != noone || on_surface != noone)
+	{
+		data.move.xspd = 0;
+	}
+
 	x			+= data.move.xspd;
 	y			+= data.move.yspd;
 }

@@ -5,14 +5,17 @@
 *						  
 *
 */
-	
+	- Criar sprite de colisão do projetil com as paredes, atualmente a instancia é simplesmente destruída.
+
+	- Colocar uma lista de estados para rastreabilidade de bugs
+
 	- Limitar os dashs a cada ciclo de stamina
 
-	- Adicionar um contador para o timer do dash, para o player saber quando tá disponível
+	- Adicionar um contador para o timer do dash, para o player saber quando está disponível
 
 	- Ajustar como é feito o redimensionamento da tela no obj_controller
 
-	- Criar um script para setas as informações nos inimigos com todos os parâmetros setados
+	- Criar um script para setar as informações nos inimigos com todos os parâmetros setados
 		(isso dispensa a criação de objetos específicos para cada inimigo)
 		
 	- Colocar audio nos ataques dos inimigos

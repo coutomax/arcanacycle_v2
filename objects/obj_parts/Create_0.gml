@@ -1,6 +1,6 @@
-depth	= 2;
+depth		= 2;
 
-data	=
+data		=
 {
 	move	:
 	{
@@ -9,17 +9,21 @@ data	=
 	},
 	flag	:
 	{
-		is_object	: true
+		is_object	: true,
+		at_surface  : false
 	},
 	stats	: {}
 };
 
 movement = function ()
 {
-	data.move.yspd	+= global.gravity;
-	
 	collisions(self);
-	
-	x				+= data.move.xspd;
-	y				+= data.move.yspd;
+
+	if (!data.flag.at_surface)
+	{
+		data.move.yspd	+= global.gravity;
+
+		x				+= data.move.xspd;
+		y				+= data.move.yspd;
+	}
 }

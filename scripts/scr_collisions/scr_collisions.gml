@@ -10,7 +10,7 @@ function collisions(inst){
         {
             while (!place_meeting(x, y + _pixel_check_y, obj_wall))
             {
-                y			+= _pixel_check_y;
+                y				+= _pixel_check_y;
             }
             data.flag.on_ground		= true;
 			data.flag.at_surface	= false;
@@ -19,33 +19,53 @@ function collisions(inst){
 			stop_objects(inst);
         }
 		
+		var _slope_check 	= instance_place(x + data.move.xspd, y, obj_wall);
+		
 		// colisão horizontal		
-		if (place_meeting(x + data.move.xspd, y + data.move.yspd, obj_wall))
+		if (_slope_check != noone)
 		{
 			//checa se é um slope
-			if (!place_meeting(x + data.move.xspd, y - abs(data.move.xspd) - 1, obj_wall))
+			//!place_meeting(x + data.move.xspd, y - abs(data.move.xspd) - 1, obj_wall)
+			if (_slope_check.object_index == obj_slope)
 			{
 				while(place_meeting(x + data.move.xspd, y, obj_wall))
 				{
 					y				-= _sub_pixel;
 				}
 			}
-			else // se não, é uma colisão comum
+			else 
 			{
-				var _pixel_check	= _sub_pixel * sign(data.move.xspd);
 				
-				while(!place_meeting(x + _pixel_check, y, obj_wall))
+				var _max_step 	= 8;
+				var is_climbing	= false;
+				
+				for (var i = 0; i < _max_step; i++)
 				{
-					x			+= _pixel_check;
+					if (!place_meeting(x + data.move.xspd, y - i, obj_wall))
+					{
+						y -= i;
+						is_climbing = true;
+						break;
+					}
 				}
-				data.move.xspd		= 0;
+
+				if(!is_climbing)// se não, é uma colisão comum
+				{
+					var _pixel_check	= _sub_pixel * sign(data.move.xspd);
+					
+					while(!place_meeting(x + _pixel_check, y, obj_wall))
+					{
+						x				+= _pixel_check;
+					}
+					data.move.xspd		= 0;
+				}
 			}
 		}
 				
 		//colisão com plataformas
 		var _platform			= instance_place(x + data.move.xspd, y + data.move.yspd, obj_platform);
  
-		if (_platform != noone && !object_is_ancestor(object_index, obj_enemies))
+		if (_platform != noone)
 		{
 			if place_meeting(x, y + data.move.yspd, _platform) && data.move.yspd > 0 && bbox_bottom <= _platform.bbox_top + 1 //colide com a parte de cima da _platform e para de cair
 			{
@@ -82,8 +102,8 @@ function stop_objects(inst)
 	{
 		if (inst.data.flag.is_object)
 		{
-			inst.data.move.xspd			= 0;
-			inst.data.flag.at_surface	= true;
+			data.move.xspd			= 0;
+			data.flag.at_surface	= true;
 		}
 	}
 }

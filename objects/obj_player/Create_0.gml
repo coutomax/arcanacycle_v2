@@ -61,7 +61,7 @@ sm 				= new state_machine("Idle");
 sm.parent_run 	= function()
 {
 	image_speed		= 1;
-
+	
 	h_input 		= keyboard_check(ord("D")) - keyboard_check(ord("A"));
 	fall_input		= keyboard_check(ord("S"));
 	attack_input	= mouse_check_button(mb_left);
@@ -70,7 +70,7 @@ sm.parent_run 	= function()
 
 	if (data.flag.alive && !data.move.dash.active)
 	{
-		data.move.xspd	= h_input * data.move.walk_speed;
+		data.move.xspd		= h_input * data.move.walk_speed;
 
 		if (h_input != 0)
 		{
@@ -86,15 +86,18 @@ sm.parent_run 	= function()
 	data.move.yspd			+= grav;
 
 	data.flag.on_ground		= place_meeting(x, y + 1, [obj_wall, obj_slope]);
-	data.flag.at_surface	= place_meeting(x, y + 1, obj_platform);
+	var _platform			= instance_place(x + data.move.xspd, y + data.move.yspd, obj_platform);
+
+	if (sm.get_state() != "Fall")
+	{
+		data.flag.at_surface	= place_meeting(x, y + data.move.yspd, _platform) && data.move.yspd > 0 && bbox_bottom <= _platform.bbox_top + 1;
+	}	
 
 	collisions(self);
 	_player_attack();
 
-	
-
-	x += data.move.xspd;
-	y += data.move.yspd;
+	x 			+= data.move.xspd;
+	y 			+= data.move.yspd;
 }
 
 sm.add_state("Idle",
@@ -110,7 +113,8 @@ sm.add_state("Walk",
 {
 	on_enter	: function ()
 	{
-		sprite_index 	= spr_walking_player;
+		sprite_index 		= spr_walking_player;
+		data.move.xspd		= h_input * data.move.walk_speed;
 	}
 });
 
@@ -150,6 +154,7 @@ sm.add_state("Fall",
 		if (data.flag.at_surface)
 		{
 			y += 2;
+			data.flag.at_surface = false;
 		}
 	}
 });
@@ -166,7 +171,9 @@ sm.add_state("Dash",
 
 		var dash_instance 		= instance_create_layer(x - (15 * image_xscale), y, "Instances", obj_dash);
 
-		dash_instance.image_xscale = image_xscale * -1;
+		dash_instance.image_xscale 	= image_xscale * -1;
+		
+		audio_play_sound(snd_dash, 0, false, 0.05);
 	},
 	on_step	: function ()
 	{
@@ -174,9 +181,9 @@ sm.add_state("Dash",
 	},
 	on_exit	: function ()
 	{
-		grav = global.gravity;
-		data.move.dash.dash_timer = data.move.dash.timer_base;
-		data.move.dash.active = false;
+		grav 						= global.gravity;
+		data.move.dash.dash_timer 	= data.move.dash.timer_base;
+		data.move.dash.active 		= false;
 	}
 });
 
@@ -188,6 +195,10 @@ sm.add_state("Dead",
 		data.flag.alive	= false;
 		data.move.xspd	= 0;
 	},	
+	on_step 	: function ()
+	{
+		sprite_index	= spr_dead_player;
+	}
 });
 
 sm.add_transition("Idle", "Walk", function () { 
@@ -219,7 +230,7 @@ sm.add_transition("Idle", "Fall", function () {
 });
 
 sm.add_transition("Walk", "Fall", function () {
-	return data.flag.at_surface && fall_input;
+	return data.flag.at_surface && fall_input && !data.flag.on_ground;
 });
 
 sm.add_transition("Fall", "Idle", function () {
@@ -227,7 +238,7 @@ sm.add_transition("Fall", "Idle", function () {
 });
 
 sm.add_transition("Fall", "Walk", function () {
-	return (data.flag.on_ground || data.flag.at_surface) && h_input != 0;
+	return (data.flag.on_ground || data.flag.at_surface) && h_input != 0 || data.move.xspd != 0;
 });
 
 sm.add_transition("Idle", "Dead", function () {
@@ -266,8 +277,8 @@ _player_attack 	= function () //criar subrotina pra quando houverem cartas que a
 {	
 	if (attack_input && data.attack.attack_cd.is_done() && data.flag.alive)
 	{
-		var _dir				= point_direction(x, y, mouse_x, mouse_y);		
-		var _attack				= instance_create_layer(x + (5 * image_xscale), y - 10, "Instances", obj_fireball);
+		var _attack				= instance_create_layer(x + (15 * image_xscale), y - 5, "Instances", obj_fireball);
+		var _dir				= point_direction(_attack.x, _attack.y, mouse_x, mouse_y);
 		
 		_attack.data.move.xspd	= lengthdir_x(_attack.data.move.xspd, _dir);
 		_attack.data.move.yspd	= lengthdir_y(_attack.data.move.yspd, _dir);

@@ -1,5 +1,5 @@
 function state_machine (_initial_state = undefined) constructor
-{
+{	
     state           = undefined; //the current state of the state machine
     previous_state  = undefined; //the previous state of the state machine
     initial_state   = _initial_state; //the initial state of the state machine, if is undefined, the state machine will start without a state

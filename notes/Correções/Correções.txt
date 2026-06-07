@@ -5,8 +5,10 @@
 *						   (AJUSTAR EM ORDEM)
 *
 */
-	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás o projétil não vai até o cursor
-	
+	- Ajustar a forma como o projetil é tratado quando o player está encostado numa parede, pois ele é instantaneamente destruído.
+
+	- As vezes, ao morrer, o player começa a animação de morte, cancela e depois começa de novo. Normalmente quando morre em queda.
+
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.
 	
 /*
@@ -16,6 +18,13 @@
 *						   
 *
 */
+	- Ajustar dash para quando estiver por cima (não em cima) de uma plataforma durante um pulo possibilitar o dash
+
+	- As vezes, ao cair numa rampa o xspd fica 0, checar se isso o corre por conta do yspd também e resolver.
+
+	- Melhorar sistema de colisão das partes, ainda há um glitch perceptível ao colidir com o chão e não parar o xspd.
+
+	- Ao matar um inimigo que está próximo/encostado no chão, as partes e os drops não perdem o xspd e deslizam pela room.
 
 	- Corrigir bug que faz com que o inimigo ataque muito rápido enquanto você pula - OK
 
@@ -49,3 +58,7 @@
 	- No spawn do jogador, ao atirar o obj_projectiles está sendo destruído instantaneamente.
 
 	- Adicionar gravidade em cada objeto que cai.
+
+	- Ao colidir em Y (de baixo pra cima) O inimigo, as vezes, teletransporta
+
+	- Ajustar mais uma vez o local de saída dos projéteis, pois quando se atira pra trás o projétil não vai até o cursor

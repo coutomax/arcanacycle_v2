@@ -127,20 +127,11 @@ sm.add_state("Chase",
 			{
 				data.move.xspd		= lerp(data.move.xspd, data.attack.target_x * data.move.total_speed, 0.1);
 			}
-			else
-			{
-				//data.move.xspd 		= 0;
-			}
 
 			if (abs(_dy) > 15 * abs(image_yscale))
 			{
 				data.move.yspd		= lerp(data.move.yspd, data.attack.target_y * data.move.total_speed, 0.1);
 			}
-			else
-			{
-				//data.move.yspd 		= 0;
-			}			
-
 			if (data.move.xspd != 0)
 			{
 				image_xscale	= -sign(data.move.xspd);
@@ -183,6 +174,7 @@ sm.add_state("Die",
 		}
 
 		array_push(global.objects_list, self);
+
 		if (data.audio.die_sound != noone)
 		{
 			audio_play_sound(data.audio.die_sound, 0, false, 0.07);
@@ -199,9 +191,17 @@ sm.add_state("Die",
 		if (array_length(data.on_die.create_on_die) > 0 && toggle_parts)
 		{
 			toggle_parts	= false;
+
+			var _y_offset	= 0;
+
+			if (data.flag.at_surface)
+			{
+				_y_offset = sprite_height;
+			}
+
 			for (var i = 0; i < array_length(data.on_die.create_on_die); i++)
 			{
-				var _dead_parts				= instance_create_layer(x, y, "Instances", obj_parts);
+				var _dead_parts				= instance_create_layer(x, y - _y_offset, "Instances", obj_parts);
 					
 				_dead_parts.sprite_index	= data.on_die.create_on_die[i];
 				

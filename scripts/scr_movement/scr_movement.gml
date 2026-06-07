@@ -1,5 +1,5 @@
 function movement_apply (object)
 {
-	object.x			+= round(object.data.move.xspd);
-	object.y			+= round(object.data.move.yspd);
+	object.x			+= object.data.move.xspd;
+	object.y			+= object.data.move.yspd;
 }

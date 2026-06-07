@@ -5,6 +5,8 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	- Verificar a possibilidade de criar uma árvore de passivas no menu que são permanentes.
+
 	- Avaliar se coloco um estado Hurt para quando o player toma dano
 
 	- Testar movimento senoidal nos inimigos voadores
