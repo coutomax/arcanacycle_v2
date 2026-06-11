@@ -44,8 +44,9 @@
 		- Inimigo que solta minas ou bombas que ficam mesmo após a sua morte;
 		- Inimigo com campo de força ou escudo;
 		- Aranha que solta teia que deixa lento;
-		- Cogumelo que envenena
-		- Tentáculo que surge do chão
+		- Cogumelo que envenena;
+		- Tentáculo que surge do chão;
+		- Criar um baú mímico inspirado em Dark Souls;
 		
 	- Criar mais cartas
 		- Adicionar uma carta que baús aparecem com algum bonus temporário, 
