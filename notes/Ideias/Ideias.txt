@@ -28,7 +28,7 @@
 		- Adicionar drops exclusivos para alguns inimigos. (Avaliar quais drops e quais inimigos)
 	
 	- Criar mais inimigos
-		- Vespa diferente que atira ferrão;
+		- Vespa diferente que atira ferrão; - OK
 		- Inimigo que cospe ácido no chão (se pisar toma dano);
 		- Inimigo que teleporta para perto ou que;
 		- Inimigo que stuna;
@@ -44,7 +44,9 @@
 		- Inimigo que solta minas ou bombas que ficam mesmo após a sua morte;
 		- Inimigo com campo de força ou escudo;
 		- Aranha que solta teia que deixa lento;
-		- Cogumelo que envenena
+		- Cogumelo que envenena;
+		- Tentáculo que surge do chão;
+		- Criar um baú mímico inspirado em Dark Souls;
 		
 	- Criar mais cartas
 		- Adicionar uma carta que baús aparecem com algum bonus temporário, 
