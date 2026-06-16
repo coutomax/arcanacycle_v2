@@ -1,6 +1,7 @@
 depth			= 2;
 
 toggle_parts	= true;
+player_distance	= 99999;
 close_to_player	= noone;
 
 data			=
@@ -39,13 +40,13 @@ data			=
 		target_y			: 0,
 		cooldown			: 0,
 		counter				: 0,
-		custom_attack_speed	: 0
+		custom_attack_speed	: 0,
+		radius_detection 	: 0
 	},
 	flag	:
 	{
 		alive				: true,
 		pursue				: false,
-		semi_pursue			: false,
 		rotate_after_die	: false,
 		at_surface			: false,
 		is_object			: false
@@ -73,7 +74,17 @@ sm.parent_run 	= function()
 		data.move.y_direction		= 1;
 	}
 
+	if (!data.flag.pursue)
+	{
+		player_distance = point_distance(x, y, obj_player.x, obj_player.y);
+	}
+	
 	close_to_player	= instance_place(x - (5 * image_xscale), y + (5 * data.move.y_direction), obj_player);
+
+	if (player_distance <= data.attack.radius_detection) 
+	{ 
+		image_xscale 	= -sign(global.player.x - x);
+	}
 
 	if(close_to_player != noone && data.flag.alive)
 	{
@@ -116,6 +127,13 @@ sm.add_state("Chase",
 			{
 				return;
 			}
+
+			if (player_distance <= data.attack.radius_detection && !data.flag.pursue)
+			{
+				data.move.xspd		= 0;
+				data.move.yspd		= 0;
+				return;
+			}
 			
 			var _dx 			 	= global.player.x - x;
 			var _dy			 		= global.player.y - y;
@@ -140,8 +158,7 @@ sm.add_state("Chase",
 	}
 });
 
-//melee distance only
-sm.add_state("Hit",
+sm.add_state("Attack",
 {
 	on_enter	: function ()
 	{
@@ -223,18 +240,18 @@ sm.add_transition("Chase", "Idle", function () {
 });
 
 sm.add_transition("Idle", "Chase", function () {
-	return data.flag.pursue && data.flag.alive && global.player.data.stats.life > 0 && close_to_player == noone;
+	return data.flag.pursue && data.flag.alive && global.player.data.stats.life > 0 && close_to_player == noone || (player_distance > data.attack.radius_detection && !data.flag.pursue);
 });
 
-sm.add_transition("Chase", "Hit", function () {
-	return data.flag.pursue && data.flag.alive && close_to_player != noone && data.attack.counter >= data.attack.cooldown;
+sm.add_transition("Chase", "Attack", function () {
+	return data.flag.pursue && data.flag.alive && close_to_player != noone && data.attack.counter >= data.attack.cooldown || (player_distance <= data.attack.radius_detection && !data.flag.pursue && data.attack.counter >= data.attack.cooldown);
 });
 
-sm.add_transition("Hit", "Chase", function () {
-	return data.flag.pursue && data.flag.alive && close_to_player == noone;
+sm.add_transition("Attack", "Chase", function () {
+	return data.flag.pursue && data.flag.alive && close_to_player == noone || (player_distance > data.attack.radius_detection && !data.flag.pursue);
 });
 
-sm.add_transition("Hit", "Idle", function () {
+sm.add_transition("Attack", "Idle", function () {
 	return global.player.data.stats.life <= 0;
 });
 
@@ -242,7 +259,7 @@ sm.add_transition("Chase", "Die", function () {
 	return data.stats.life <= 0;
 });
 
-sm.add_transition("Hit", "Die", function () {
+sm.add_transition("Attack", "Die", function () {
 	return data.stats.life <= 0;
 });
 

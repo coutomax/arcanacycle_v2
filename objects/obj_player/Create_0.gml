@@ -65,7 +65,7 @@ sm.parent_run 	= function()
 	h_input 		= keyboard_check(ord("D")) - keyboard_check(ord("A"));
 	fall_input		= keyboard_check(ord("S"));
 	attack_input	= mouse_check_button(mb_left);
-	jump_input		= keyboard_check_pressed(vk_space);	
+	jump_input		= keyboard_check_pressed(vk_space);
 	dash_input		= keyboard_check_pressed(vk_shift);
 
 	if (data.flag.alive && !data.move.dash.active)
@@ -277,7 +277,7 @@ _player_attack 	= function () //criar subrotina pra quando houverem cartas que a
 {	
 	if (attack_input && data.attack.attack_cd.is_done() && data.flag.alive)
 	{
-		var _attack				= instance_create_layer(x + (15 * image_xscale), y - 5, "Instances", obj_fireball);
+		var _attack				= instance_create_layer(x, y - 15, "Instances", obj_fireball);
 		var _dir				= point_direction(_attack.x, _attack.y, mouse_x, mouse_y);
 		
 		_attack.data.move.xspd	= lengthdir_x(_attack.data.move.xspd, _dir);

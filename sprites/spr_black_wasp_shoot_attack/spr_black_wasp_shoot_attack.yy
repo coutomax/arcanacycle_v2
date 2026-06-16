@@ -17,6 +17,7 @@
     {"$GMSpriteFrame":"v1","%Name":"5123b04d-ad54-416e-a30c-c5dc67acbd83","name":"5123b04d-ad54-416e-a30c-c5dc67acbd83","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"86b005d6-e74b-4270-9abb-7248b1d4e7b1","name":"86b005d6-e74b-4270-9abb-7248b1d4e7b1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"64cc2d95-b1f7-4b80-9281-857e0b3cc107","name":"64cc2d95-b1f7-4b80-9281-857e0b3cc107","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"07914a9b-f897-4ba0-a386-1480daff1604","name":"07914a9b-f897-4ba0-a386-1480daff1604","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -52,19 +53,19 @@
             "0":{"$MessageEventKeyframe":"","Events":[
                 "shoot",
               ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
-          },"Disabled":false,"id":"2feb6cca-e7ae-4e2d-8538-af26b28971e8","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          },"Disabled":false,"id":"122508ce-e2d9-4cdf-b764-6a04b54d2539","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
         {"$Keyframe<MessageEventKeyframe>":"","Channels":{
             "0":{"$MessageEventKeyframe":"","Events":[
                 "reset",
               ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
-          },"Disabled":false,"id":"44a48398-5156-46e5-aec5-136571cfe2d4","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          },"Disabled":false,"id":"51d40ac2-611e-42df-a157-764ae2011c65","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
       ],
       "resourceType":"KeyframeStore<MessageEventKeyframe>",
       "resourceVersion":"2.0",
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":5.0,
+    "length":6.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -98,6 +99,9 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64cc2d95-b1f7-4b80-9281-857e0b3cc107","path":"sprites/spr_black_wasp_shoot_attack/spr_black_wasp_shoot_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"9a0cd40a-9359-4da3-a358-18045f9c2915","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"07914a9b-f897-4ba0-a386-1480daff1604","path":"sprites/spr_black_wasp_shoot_attack/spr_black_wasp_shoot_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d45d858e-d834-4755-82a0-126410e154d6","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

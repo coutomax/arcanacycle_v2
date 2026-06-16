@@ -12,7 +12,21 @@ if (_instance_id == id)
 				audio_play_sound(snd_damage_taken, 0, false, 0.03);
 			}
 		break;
-	
+
+		case "shoot":
+			if (global.player.data.stats.life > 0)
+			{
+				var _attack 	= instance_create_layer(x, y, "Instances", obj_sting);
+				var _dir 		= point_direction(_attack.x, _attack.y, global.player.x, global.player.y);
+
+				_attack.data.move.xspd 		= lengthdir_x(_attack.data.move.xspd, _dir);
+				_attack.data.move.yspd 		= lengthdir_y(_attack.data.move.yspd, _dir);
+
+				_attack.direction 			= _dir;
+				_attack.image_angle 		= _dir - 90;
+			}
+		break;
+
 		case "reset":
 			sprite_index	= data.visual.idle_sprite;
 		break;

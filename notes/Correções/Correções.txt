@@ -5,8 +5,6 @@
 *						   (AJUSTAR EM ORDEM)
 *
 */
-	- Ajustar a forma como o projetil é tratado quando o player está encostado numa parede, pois ele é instantaneamente destruído.
-
 	- As vezes, ao morrer, o player começa a animação de morte, cancela e depois começa de novo. Normalmente quando morre em queda.
 
 	- Verificar a possibilidade de remover o timer, caso começe a dar dor de caçeba na aplicação com a state machine.
@@ -18,6 +16,10 @@
 *						   
 *
 */
+	- Ajustar a forma como o projetil é tratado quando o player está encostado numa parede, pois ele é instantaneamente destruído.
+	
+	- Ao se afastar do inimigo reseta o tempo de ataque dele, permitingo que inimigos que atiram ataquem muito rápido ao entrarem no alcance.
+
 	- Ajustar dash para quando estiver por cima (não em cima) de uma plataforma durante um pulo possibilitar o dash
 
 	- As vezes, ao cair numa rampa o xspd fica 0, checar se isso o corre por conta do yspd também e resolver.

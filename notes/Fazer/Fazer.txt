@@ -5,6 +5,10 @@
 *						  
 *
 */
+	- Criar lógica para evitar que inimigos fiquem empilhados.
+	
+	- Criar lógica para o inimigo não atacar com projéteis quando estiver travado em uma parede.
+
 	- Criar sprite de colisão do projetil com as paredes, atualmente a instancia é simplesmente destruída.
 
 	- Colocar uma lista de estados para rastreabilidade de bugs

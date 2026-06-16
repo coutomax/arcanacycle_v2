@@ -6,7 +6,6 @@ data	=
 	{
 		xspd			: 0,
 		yspd			: 0,
-		custom_speed	: false,
 	},
 	stats	:
 	{
@@ -20,18 +19,20 @@ data	=
 		sound_offset	: 0, // -1 para sons universais, 0 para nenhum e > 0 para sons com distanciamento
 		loop			: noone,
 		sound			: noone,
-		sound_loop		: false,
+		collide_sound	: noone,
+		sound_loop		: false,		
 		play_once		: false,
+	},
+	flag	:
+	{
+		is_enemy		: false
 	}
 };
 
 function movement ()
-{
-	if (!data.move.custom_speed)
-	{
-		x		+= data.move.xspd;
-		y		+= data.move.yspd;
-	}
+{	
+	x		+= data.move.xspd;
+	y		+= data.move.yspd;
 }
 function play_audio ()
 {
