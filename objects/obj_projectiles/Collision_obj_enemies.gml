@@ -5,7 +5,7 @@ if (other.data.flag.alive && !data.flag.is_enemy)
 	{
 		audio_play_sound(data.audio.collide_sound, 0, false, 0.04);
 	}
-	pop_damage(self, other);
-	instance_destroy(self);
+	pop_damage(id, other);
+	instance_destroy(id);
 }
 

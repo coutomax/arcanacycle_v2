@@ -41,7 +41,7 @@
                   ],"flexDirection":0,"height":{"unit":1,"value":100.0,},"justifyContent":1,"name":"fp_hp_bar","nodeColour":4282930674,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":1,"value":100.0,},},
               ],"flexDirection":0,"height":{"unit":2,"value":35.0,},"justifyContent":0,"name":"fp_status_hud","nodeColour":4282968562,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":65.0,},},
           ],"flexDirection":0,"height":{"unit":2,"value":100.0,},"justifyContent":0,"name":"fp_screen","nodeColour":4294101320,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_status_bars","nodeColour":4288104690,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_status_bars","nodeColour":4288104690,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
     {"$GMRUILayer":"v1","%Name":"ui_yes_no_menu_option","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"fp_screen","alignItems":2,"children":[
             {"$GMRFlexPanel":"","%Name":"fp_menu","alignItems":2,"children":[
@@ -100,7 +100,7 @@
                 {"$GMRSpriteGraphic":"v1","%Name":"graphic_869D2D9","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_869D2D9","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_panel","path":"sprites/spr_panel/spr_panel.yy",},"x":0.0,"y":0.0,},
               ],"flexDirection":0,"height":{"unit":2,"value":25.0,},"justifyContent":1,"name":"fp_menu","nodeColour":4294068455,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":15.0,},},
           ],"flexDirection":0,"height":{"unit":2,"value":100.0,},"justifyContent":1,"name":"fp_screen","nodeColour":4282970827,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":100.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_start_menu","nodeColour":4294089288,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_start_menu","nodeColour":4294089288,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
     {"$GMRUILayer":"v1","%Name":"ui_pause_menu","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"fp_screen","alignItems":2,"children":[
             {"$GMRFlexPanel":"","%Name":"fp_menu","alignItems":2,"children":[

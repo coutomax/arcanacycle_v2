@@ -7,6 +7,17 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_24C74B64","path":"rooms/Rm_start/Rm_start.yy",},
+    {"name":"inst_733EFC85","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_58304799","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_79199DBF","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_710C5B85","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_5639057E","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_33203D49","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_2EACE24","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_5ECFA35","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_18930979","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_7FF69DBA","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_D03E46E","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

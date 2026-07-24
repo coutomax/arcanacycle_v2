@@ -45,7 +45,7 @@ function floating_drop ()
 	if (!data.flag.at_surface)
 	{
 		data.move.yspd		+= global.gravity;
-		collisions(self);
+		collisions(id);
 	}
 	else
 		if (data.behavior.should_float)

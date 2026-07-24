@@ -16,6 +16,8 @@
 *						   
 *
 */
+	- Criar lógica para evitar que inimigos fiquem empilhados.
+
 	- Ajustar a forma como o projetil é tratado quando o player está encostado numa parede, pois ele é instantaneamente destruído.
 	
 	- Ao se afastar do inimigo reseta o tempo de ataque dele, permitingo que inimigos que atiram ataquem muito rápido ao entrarem no alcance.

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_movement",
   "parent":{
-    "name":"Character_movement",
-    "path":"folders/Scripts/General_Controllers/Character_movement.yy",
+    "name":"Movement",
+    "path":"folders/Scripts/General_Controllers/Movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

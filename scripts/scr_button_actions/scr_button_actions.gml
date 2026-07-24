@@ -18,7 +18,9 @@ function button_actions(obj, actions){
 				case	"new_game":
 					layer_set_visible("ui_start_menu", false);
 					layer_set_visible("ui_game_over", false);
-					room_goto(0);
+                    layer_set_visible("ui_status_bars", true);
+                    global.started  = true;
+					room_goto(1);
 				break;		
 				
 				case	"settings":

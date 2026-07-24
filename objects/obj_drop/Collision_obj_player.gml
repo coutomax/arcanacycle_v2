@@ -6,7 +6,7 @@ switch (data.behavior.description)
 	
 	case "life":
 				
-		pop_damage(self, other);
+		pop_damage(id, other);
 		
 		global.player.data.stats.life		+= global.heal * global.heal_multiplier;
 		
@@ -17,6 +17,6 @@ switch (data.behavior.description)
 		
 		audio_play_sound(snd_life, 0, false, 0.07);
 		
-		instance_destroy(self);
+		instance_destroy(id);
 	break;
 }

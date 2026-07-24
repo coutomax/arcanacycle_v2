@@ -5,6 +5,8 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+	- Estudar possibilidade de adicionar um empurrão em certos projéteis.
+	
 	- Verificar a possibilidade de criar uma árvore de passivas no menu que são permanentes.
 
 	- Avaliar se coloco um estado Hurt para quando o player toma dano
@@ -49,6 +51,9 @@
 		- Criar um baú mímico inspirado em Dark Souls;
 		
 	- Criar mais cartas
+        - Adicionar cartas com estados (fogo, gelo, choque, veneno, petrificação).
+        - Adicionar cartas com buffs como espinhos (thorns, vampirismo, velocidade, 
+            life regen, redução de dano, bonus de sorte).
 		- Adicionar uma carta que baús aparecem com algum bonus temporário, 
 		  ou item, ou algo do tipo.
 		- Adicionar uma carta onde os projéteis atravessam os inimigos.

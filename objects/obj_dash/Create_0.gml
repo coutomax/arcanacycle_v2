@@ -12,6 +12,6 @@ fader       = function ()
 
     if (fade_timer <= 0 || image_alpha <= 0)
     {
-        instance_destroy(self);
+        instance_destroy(id);
     }
 }

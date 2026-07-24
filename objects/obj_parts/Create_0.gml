@@ -17,7 +17,7 @@ data		=
 
 movement = function ()
 {
-	collisions(self);
+	collisions(id);
 
 	if (!data.flag.at_surface)
 	{

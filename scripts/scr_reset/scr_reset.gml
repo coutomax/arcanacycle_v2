@@ -12,6 +12,7 @@ function game_reset()
 	//booleanos
 	global.new_game			= true;
 	global.paused			= false;
+    global.started          = false;
 
 	//numerics
 	global.gravity			= .25;
@@ -63,7 +64,7 @@ function game_reset()
 	{
 		with(obj_enemies)
 		{
-			instance_destroy(self);
+			instance_destroy(id);
 		}
 	}
 }

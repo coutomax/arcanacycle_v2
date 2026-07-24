@@ -5,6 +5,14 @@
 *						  
 *
 */
+	- usar octile até os obstáculos, manhattan tie breaker para da a volta neles corretamente até não ter nenhum obstáculo perto.
+		OU achar uma outra forma de suavizar a diagonal ao chegar em uma quina.
+
+	- Ajustar o A* pra retornar o valor final do target. Se o valor retornado for = ao obj_player.x e y, não recalcular.
+		- Ver a possibilidade de criar um grid de obstáculos fixo, que é global e que não depende dos objetos que se movem.
+
+	- Ajustar o sprite do fantasma ao morrer para ficar similar ao do TBH, onde ele se desfas em particulas.
+	
 	- Criar lógica para evitar que inimigos fiquem empilhados.
 	
 	- Criar lógica para o inimigo não atacar com projéteis quando estiver travado em uma parede.

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_collisions",
+  "%Name":"scr_a_star",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_collisions",
+  "name":"scr_a_star",
   "parent":{
     "name":"Movement",
     "path":"folders/Scripts/General_Controllers/Movement.yy",

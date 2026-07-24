@@ -11,7 +11,7 @@ grav 			= global.gravity;
 
 data			=
 {
-	stats	:
+	stats	: 
 {
 		life				: 100,
 		max_life			: 100,
@@ -93,7 +93,7 @@ sm.parent_run 	= function()
 		data.flag.at_surface	= place_meeting(x, y + data.move.yspd, _platform) && data.move.yspd > 0 && bbox_bottom <= _platform.bbox_top + 1;
 	}	
 
-	collisions(self);
+	collisions(id);
 	_player_attack();
 
 	x 			+= data.move.xspd;
@@ -277,7 +277,7 @@ _player_attack 	= function () //criar subrotina pra quando houverem cartas que a
 {	
 	if (attack_input && data.attack.attack_cd.is_done() && data.flag.alive)
 	{
-		var _attack				= instance_create_layer(x, y - 15, "Instances", obj_fireball);
+		var _attack				= instance_create_layer(x + 5 * -sign(image_xscale), y - 15, "Instances", obj_fireball);
 		var _dir				= point_direction(_attack.x, _attack.y, mouse_x, mouse_y);
 		
 		_attack.data.move.xspd	= lengthdir_x(_attack.data.move.xspd, _dir);

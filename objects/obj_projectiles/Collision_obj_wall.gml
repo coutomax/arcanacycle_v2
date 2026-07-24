@@ -1,4 +1,4 @@
 if (other.destroy_projectiles)
 {
-	instance_destroy(self);
+	instance_destroy(id);
 }

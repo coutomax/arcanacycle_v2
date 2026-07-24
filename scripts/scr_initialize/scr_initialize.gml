@@ -12,6 +12,7 @@ global.objects_list		= []; //lista de objetos para serem deletados
 //booleanos
 global.new_game			= true;
 global.paused			= false;
+global.started          = false;
 
 //numerics
 global.gravity			= .25;
@@ -62,6 +63,9 @@ global.enemy_speed_multiplier	= 1;
 global.enemy_exp_multiplier		= 1;
 
 global.enemy_interval_multiplier	= 2;// 1 ataque a cada 2 segundos
+
+//structs or lists
+global.path_queue 		= ds_priority_create();
 
 //drop table global para drops simples (mesmo comportamento, usam sprites)
 global.drop_table	= [

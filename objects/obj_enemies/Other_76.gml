@@ -8,7 +8,7 @@ if (_instance_id == id)
 			if (global.player.data.stats.life > 0)
 			{
 				global.player.data.stats.life		-= data.stats.damage;
-				pop_damage(self, global.player);
+				pop_damage(id, global.player);
 				audio_play_sound(snd_damage_taken, 0, false, 0.03);
 			}
 		break;
