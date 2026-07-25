@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_blank_button",
-    "path":"sprites/spr_blank_button/spr_blank_button.yy",
+    "name":"spr_small_button",
+    "path":"sprites/spr_small_button/spr_small_button.yy",
   },
   "spriteMaskId":null,
   "visible":true,

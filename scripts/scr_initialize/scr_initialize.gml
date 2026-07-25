@@ -67,6 +67,10 @@ global.enemy_interval_multiplier	= 2;// 1 ataque a cada 2 segundos
 //structs or lists
 global.path_queue 		= ds_priority_create();
 
+global.cards        = [
+    //{card: 0, name: "card_0", sprite: spr_card_0, description: "card_0"},
+];
+
 //drop table global para drops simples (mesmo comportamento, usam sprites)
 global.drop_table	= [
 	{item: -1, sprite: noone, weigth: 3, description: "unic_drop"},//drop unico

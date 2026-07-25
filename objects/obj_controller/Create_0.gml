@@ -9,14 +9,13 @@ respawn_timer 	= 0;
 
 max_paths 		= 4;
 
-gpu_set_texfilter(false);
-
 game_set_speed(60, gamespeed_fps);
 show_debug_overlay(false);
-window_set_size(display_w, display_h-76);
-window_set_fullscreen(false);
-//call_later(2, time_source_units_frames, window_center);
 
+display_set_gui_size(1920, 1080);
+gpu_set_texfilter(false);
+
+surface_resize(application_surface, 1920, 1080);
 //show_debug_overlay(true);
 
 object_cleaner = function ()

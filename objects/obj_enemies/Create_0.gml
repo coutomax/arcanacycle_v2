@@ -110,7 +110,7 @@ sm.parent_run 	= function()
 		obstacle = collision_line(_x, _y, global.player.x, global.player.y, [obj_wall, obj_platform, obj_slope], false, true);
     }
 
-    if (player_distance <= data.attack.radius_detection && instance_exists(global.player)) 
+    if (player_distance <= data.attack.radius_detection && instance_exists(global.player))
     {
         image_xscale 		= -sign(global.player.x - _x);
     }
