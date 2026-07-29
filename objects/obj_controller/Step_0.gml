@@ -1,3 +1,9 @@
+if (language != global.language)
+{
+    load_language(global.language);
+    language    = global.language;
+}
+
 if (global.paused)
 {
 	exit;
@@ -30,9 +36,12 @@ if (_has_player && global.player.data.stats.life < 0)
 	}
 }
 
-object_cleaner();
-path_tracker();
-enemy_spawner();
-
+if (global.started)
+{
+	object_cleaner();
+  	path_tracker();
+  	enemy_spawner();
+  	roll_cards();
+}
 
 update_fps++;

@@ -5,6 +5,13 @@
 *						  (IMPLEMENTAR OU NÃO)
 *
 */
+    - Se o jogador perder 3 vezes seguidas:
+        - Criar uma tela de opções para esse caso
+        - Nessa tela, só terá a opção: alterar modo, com a opção BEBÊZINHO
+        - Botões: aceitar, recusar e tentar novamente    
+
+    - criar uma lista de cartas já usadas, tipo um bestiário, mas de cartas
+
 	- Estudar possibilidade de adicionar um empurrão em certos projéteis.
 	
 	- Verificar a possibilidade de criar uma árvore de passivas no menu que são permanentes.
@@ -18,7 +25,10 @@
 	- Fazer com que alguns inimigos aleatóriamente desviem dos projéteis
 	
 	- Avaliar se faz o player e os inimigos piscarem ao tomar dano
-	
+    
+    - Criar uma carta que cria um objeto no meio do mapa que você precisa
+        defender, mas te dá algo em troca. (bonus, item, etc...).
+
 	- Criar mais drops
 		- Criar um pernil ou presunto que cura 50 de vida
 		- Criar um sanduiche (fazer um formato de pão) que cura 15

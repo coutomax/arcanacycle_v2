@@ -6,8 +6,8 @@ update_fps  = 0;
 actual_fps  = fps_real;
 
 respawn_timer 	= 0;
-
 max_paths 		= 4;
+language        = undefined;
 
 game_set_speed(60, gamespeed_fps);
 show_debug_overlay(false);
@@ -39,8 +39,6 @@ path_tracker = function()
         _paths++;
 
         var _enemy_id = ds_priority_delete_min(global.path_queue);
-
-        
     }
 }
 
@@ -66,3 +64,44 @@ enemy_spawner = function ()
 	var _enemy 	= instance_create_layer(_random_x, _random_y, "Instances", obj_wasp);
 	respawn_timer = 0;
 }
+
+generate_card_list = function ()
+{
+	var _card_array_lenght 	= array_length(global.cards);
+
+	for (var i = 0; i < _card_array_lenght; i++)
+	{
+		var _card_struct 	= global.cards[i];
+		ds_list_add(global.card_list, _card_struct);
+	}
+
+	ds_list_copy(global.available_cards, global.card_list);
+}
+
+roll_cards  	= function ()
+{
+	if (!global.roll_cards)	return;
+	if (ds_list_size(global.available_cards) <= 0) return;
+
+	global.roll_cards 		= false;
+	var _card_list_lenght 	= ds_list_size(global.available_cards);
+
+	ds_list_shuffle(global.available_cards);
+
+	for (var i = 0; i < 5; i++)
+	{
+		var _card_struct 	= global.available_cards[| i];
+
+		array_push(global.drawn_cards, _card_struct);
+
+		_card_struct.maximum--;
+		
+		if (_card_struct.maximum <= 0)
+		{
+			ds_list_delete(global.available_cards, _card_struct.card);
+		}
+	}
+
+}
+
+generate_card_list();

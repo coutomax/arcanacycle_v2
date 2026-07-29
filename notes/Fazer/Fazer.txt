@@ -5,6 +5,8 @@
 *						  
 *
 */
+    - Fazer animação das cartas girando ao abrir a tela ui_cards
+
 	- usar octile até os obstáculos, manhattan tie breaker para da a volta neles corretamente até não ter nenhum obstáculo perto.
 		OU achar uma outra forma de suavizar a diagonal ao chegar em uma quina.
 

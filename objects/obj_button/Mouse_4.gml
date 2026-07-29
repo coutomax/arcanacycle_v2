@@ -3,9 +3,9 @@ yscale			= escalaY * 0.8;
 
 image_index		= 1;
 
-if (selfText != undefined)
+if (layer_data.text != undefined)
 {
-	flexpanel_node_style_set_position(selfText, flexpanel_edge.top, 5, flexpanel_unit.point);
+	flexpanel_node_style_set_position(layer_data.text, flexpanel_edge.top, 5, flexpanel_unit.point);
 }
 
 if (visible)

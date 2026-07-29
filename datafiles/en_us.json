@@ -1,0 +1,42 @@
+﻿// language: 0
+{
+    "language": "en-us",
+    "language_name": "English",
+    "ui_start_menu": {
+        "new_game": "NEW GAME",
+        "settings": "SETTINGS",
+        "exit": "EXIT"
+    },
+    "ui_pause_menu": {
+        "resume": "CONTINUE",
+        "settings": "SETTINGS",
+        "main_menu": "MENU"
+    },
+    "ui_game_over": {
+        "menu_title": [
+            "LOLOL YOU LOST!",
+            "IS THIS YOUR BEST?",
+            "NOT THIS TIME!",
+            "TRY BABY MODE AHAHAHA"
+        ],
+        "main_menu": "MENU",
+        "new_game": "NEW GAME"
+    },
+    "ui_yes_no_menu_option": {
+        "yes_option": "YES",
+        "no_option": "NO"
+    },
+    "ui_cards": {
+        "menu_title": "MAKE YOUR CHOICE",
+        "reroll": "REROLL",
+        "skip": "SKIP"
+    },
+    "cards": [
+        {"name": "LIFE", "description": "MORE LIFE!"},
+        {"name": "PROJECTILES", "description": "MORE PROJECTILES"},
+        {"name": "BUBBLE PARTY", "description": "MORE BUBBLES"},
+        {"name": "DEADLY WRECKAGE", "description": "MORE RUBBLE"},
+        {"name": "GUIDED PROJECTILES", "description": "MORE GUIDED PROJECTILES"},
+        {"name": "PORTALS", "description": "MORE PORTALS"},
+    ]
+}

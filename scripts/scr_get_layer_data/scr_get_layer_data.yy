@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_get_layer_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_get_layer_data",
+  "parent":{
+    "name":"Utils",
+    "path":"folders/Scripts/General_Controllers/Utils.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

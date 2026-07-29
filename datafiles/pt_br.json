@@ -1,0 +1,42 @@
+// language: 0
+{
+    "language": "pt-br",
+    "language_name": "Português",
+    "ui_start_menu": {
+        "new_game": "NOVO JOGO",
+        "settings": "OPÇÕES",
+        "exit": "SAIR"
+    },
+    "ui_pause_menu": {
+        "resume": "CONTINUAR",
+        "settings": "OPÇÕES",
+        "main_menu": "MENU"
+    },
+    "ui_game_over": {
+        "menu_title": [
+            "KKKKKK PERDEU!",
+            "ESSE É O SEU MELHOR?",
+            "NÃO FOI DESSA VEZ!",
+            "TENTE O MODO BEBÊZINHO AHAHAHA"
+        ],
+        "main_menu": "MENU",
+        "new_game": "NOVO JOGO"
+    },
+    "ui_yes_no_menu_option": {
+        "yes_option": "SIM",
+        "no_option": "NÃO"
+    },
+    "ui_cards": {
+        "menu_title": "FAÇA A SUA ESCOLHA",
+        "reroll": "RESORTEAR",
+        "skip": "PULAR"
+    },
+    "cards": [
+        {"name": "VIDA", "description": "MAIS VIDA!"},
+        {"name": "PROJETÉIS", "description": "MAIS PROJETÉIS"},
+        {"name": "FESTA DE BOLHAS", "description": "MAIS BOLHAS"},
+        {"name": "DESTROÇOS MORTAIS", "description": "MAIS ESCOMBROS"},
+        {"name": "PROJETÉIS GUIADOS", "description": "MAIS PROJETÉIS GUIADOS"},
+        {"name": "PORTAIS", "description": "MAIS PORTAIS"}
+    ]
+}
