@@ -3,7 +3,7 @@
 						CRIA E INICIA TODAS AS VIARIÁVEIS GLOBAIS
 
 */
-global.language  		= 0; // 0 - pt-br, 1 - en
+global.language  		= 1; // 0 - pt-br, 1 - en
 function initialize()
 { 
     randomize();
@@ -30,6 +30,7 @@ function initialize()
     //Gerenciador de layers (recebe 1 layer por vez)
     global.last_layer		= noone;
     global.last_action      = noone; // recebe a action do ultimo botão clicado.
+    global.active_layer     = undefined;
     
     //Contadores para estatísticas do jogador
     global.player_stats		=

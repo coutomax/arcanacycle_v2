@@ -9,8 +9,6 @@ function get_ui_data(_layer = undefined, _container = undefined, _fp_name = unde
 	var _child 	= flexpanel_node_get_child(_node, _container);
 	var _text 	= flexpanel_text_finder(_child, _fp_name);
 
-	//_teste_struct.width
-
 	var _struct 	= flexpanel_node_get_struct(_text);
 	var _element_id = _struct.layerElements[0].elementId;
 
@@ -27,13 +25,13 @@ function get_ui_data(_layer = undefined, _container = undefined, _fp_name = unde
 	}
 }
 
-function flexpanel_text_finder(layerName, node)
+function flexpanel_text_finder(layerName, node, _child = undefined)
 {
-	var _flexpanel = flexpanel_node_get_child(layerName, node);
+	var _flexpanel 		= flexpanel_node_get_child(layerName, node);
 	
 	if (_flexpanel != undefined)
 	{
-		var _fp_text = flexpanel_node_get_child(_flexpanel, "fp_text");
+		var _fp_text 	= flexpanel_node_get_child(_flexpanel, _child == undefined ? "fp_text" : _child);
 		
 		if (_fp_text != undefined)
 		{
@@ -41,7 +39,7 @@ function flexpanel_text_finder(layerName, node)
 		}
 		else
 		{
-			flexpanel_text_finder(_flexpanel, node);
+			flexpanel_text_finder(_flexpanel, node, _child);
 		}
 	}
 	else
@@ -186,16 +184,21 @@ function _swap_layer(_commit_action = undefined, _actual_layer = undefined, _nex
 	if (_next_layer != undefined)
 	{
 		layer_set_visible(_next_layer, true);
+		global.active_layer = _next_layer == "ui_status_bars" ? undefined : _next_layer;
 	}
 
 	layer_set_visible(_actual_layer, false);
-	
-	/*
-	if (global.last_action == _actual_action || global.last_action == noone)
-	
-	*/
 
 	global.last_action 	= _commit_action;
 	global.last_layer 	= _actual_layer;
 }
 
+function get_tittle_id(_layer_id = undefined)
+{
+	//show_message("get_tittle_id: " + string(_layer_id));
+	if (_layer_id == undefined) return;
+	var _node  	= layer_get_flexpanel_node(_layer_id);
+	var _title 	= flexpanel_text_finder(_node, "fp_menu_title", "fp_menu_title");
+
+	return _title;
+}

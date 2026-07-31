@@ -23,6 +23,7 @@
         "new_game": "NOVO JOGO"
     },
     "ui_yes_no_menu_option": {
+        "menu_title": "VOCÊ TEM CERTEZA?",
         "yes_option": "SIM",
         "no_option": "NÃO"
     },

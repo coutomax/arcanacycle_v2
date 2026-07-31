@@ -12,10 +12,10 @@ language        = undefined;
 game_set_speed(60, gamespeed_fps);
 show_debug_overlay(false);
 
-display_set_gui_size(1920, 1080);
+//display_set_gui_size(1920, 1080);
 gpu_set_texfilter(false);
 
-surface_resize(application_surface, 1920, 1080);
+//surface_resize(application_surface, 1920, 1080);
 //show_debug_overlay(true);
 
 object_cleaner = function ()

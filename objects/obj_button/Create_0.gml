@@ -33,8 +33,6 @@ set_dimensions = function ()
 {
     if (!variable_struct_exists(global.dialogue_struct, ui_data._layer)) return;
         
-    
-    //ui_data.flexpanel_text.nodes[0].nodes[0]
     var _panel_struct	= ui_data._struct;
     var _max_scale 		= _panel_struct.layerElements[0].textScaleX;  
     var _real_width 	= round(string_width(global.dialogue_struct[$ ui_data._layer][$ actions]) * _max_scale);

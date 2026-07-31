@@ -13,8 +13,8 @@
   "name":"obj_card_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Card_Controller",
-    "path":"folders/Objects/Game_Components/Card_Controller.yy",
+    "name":"Card_parent",
+    "path":"folders/Objects/Game_Components/Card_parent.yy",
   },
   "parentObjectId":null,
   "persistent":false,
