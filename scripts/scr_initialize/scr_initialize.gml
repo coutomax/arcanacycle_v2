@@ -29,20 +29,21 @@ function initialize()
     
     //Gerenciador de layers (recebe 1 layer por vez)
     global.last_layer		= noone;
+    global.last_action      = noone; // recebe a action do ultimo botão clicado.
     
     //Contadores para estatísticas do jogador
     global.player_stats		=
     {
-    games_played	: 0,
-    kills			: 0,
-    waves			: 0,
-    life_lost		: 0,
-    life_healed		: 0,
-    damage_caused	: 0,
-    damage_taken	: 0,
-    experience		: 0,
-    level			: 0,
-    gold			: 0
+        games_played	: 0,
+        kills			: 0,
+        waves			: 0,
+        life_lost		: 0,
+        life_healed		: 0,
+        damage_caused	: 0,
+        damage_taken	: 0,
+        experience		: 0,
+        level			: 0,
+        gold			: 0
     };
     
     //numerics para inimigos

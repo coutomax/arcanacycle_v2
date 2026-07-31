@@ -89,57 +89,54 @@ function button_actions(obj, actions){
 			switch (action)
 			{
 				case	"new_game":
-					layer_set_visible("ui_start_menu", false);
-					layer_set_visible("ui_game_over", false);
-                    layer_set_visible("ui_status_bars", true);
-                    global.started  = true;
-					room_goto(0);
+					_swap_layer(action, obj_layer, "ui_status_bars", ["ui_start_menu", "ui_game_over"], function () {
+						global.started  = true;
+						room_goto(0);
+					})
 				break;		
 				
 				case	"settings":
-					global.last_layer = obj_layer;
-					layer_set_visible("ui_start_menu", false);
-					layer_set_visible("ui_settings", true);
+					_swap_layer(action, obj_layer, "ui_settings", ["ui_start_menu", "ui_pause_menu"]);
 				break;	
 				
 				case	"exit":
-					global.last_layer = obj_layer;					
-					if (obj_layer != noone)
-					{
-						layer_set_visible(obj_layer, false);
-						layer_set_visible("ui_yes_no_menu_option", true);
-					}
+					_swap_layer(action, obj_layer, "ui_yes_no_menu_option", ["ui_start_menu", "ui_pause_menu"]);
 				break;
 				
 				case	"yes_option":
-					game_end();
+					var _next_layer	= global.last_action == "skip" ? undefined : "ui_start_menu";
+
+					_swap_layer(action, obj_layer, _next_layer, ["ui_yes_no_menu_option", "ui_pause_menu"], function () {
+						if (global.last_action == "exit")
+						{
+							game_end();
+						}
+
+						if (global.last_action == "main_menu")
+						{
+							game_reset();
+							room_goto(1);
+						}
+
+						if (global.last_action == "skip")
+						{
+							global.paused = false;
+						}
+					});					
 				break;
 				
 				case	"no_option":
-					if (obj_layer != noone)
-					{
-						layer_set_visible(obj_layer, false);
-						layer_set_visible(global.last_layer, true);
-					}
+					_swap_layer(action, obj_layer, global.last_layer, ["ui_yes_no_menu_option"]);
 				break;
 				
 				case "resume":
-					layer_set_visible("ui_pause_menu", false);
-					global.paused = false;
+					_swap_layer(action, obj_layer, "ui_pause_menu", ["ui_pause_menu"], function () {
+						global.paused = false;
+					});
 				break;
 				
 				case "main_menu":
-					
-					/*
-						OBS: REFINAR A FUNÇÃO PARA RESETAR O JOGO
-					*/
-
-					layer_set_visible("ui_start_menu", true);
-					layer_set_visible("ui_pause_menu", false);
-					layer_set_visible("ui_game_over", false);
-					layer_set_visible("ui_status_bars", false);
-					game_reset();
-					room_goto(1);
+					_swap_layer(action, obj_layer, "ui_yes_no_menu_option", ["ui_pause_menu", "ui_game_over", "ui_status_bars"]);
 				break;
             
                 case "reroll":
@@ -150,7 +147,7 @@ function button_actions(obj, actions){
                 break;
             
                 case "skip":
-                    
+					_swap_layer(action, obj_layer, "ui_yes_no_menu_option");
                 break; 
 				case "pt":
                     global.language = 0;
@@ -161,11 +158,44 @@ function button_actions(obj, actions){
                     global.language = 1;
 					layer_set_visible(obj_layer, false);
 					layer_set_visible(global.last_layer, true);
-                break;  
+                break;
 			}
 		}
 	}
 	
 	return _a;
+}
+
+function _swap_layer(_commit_action = undefined, _actual_layer = undefined, _next_layer = undefined, _close_layers = [], _execute = undefined)
+{
+	if (_actual_layer == undefined) return;
+
+	if (array_length(_close_layers) > 0)
+	{
+		for (var i = 0; i < array_length(_close_layers); i++)
+		{
+			layer_set_visible(_close_layers[i], false);
+		}
+	}
+
+	if (_execute != undefined && is_callable(_execute))
+	{
+		_execute();
+	}
+
+	if (_next_layer != undefined)
+	{
+		layer_set_visible(_next_layer, true);
+	}
+
+	layer_set_visible(_actual_layer, false);
+	
+	/*
+	if (global.last_action == _actual_action || global.last_action == noone)
+	
+	*/
+
+	global.last_action 	= _commit_action;
+	global.last_layer 	= _actual_layer;
 }
 
