@@ -16,6 +16,8 @@
 *						   
 *
 */
+    - Ajustar valor da vidad eo player para não ficar negativa.
+    Atualmente estou setando = 0 ao morrer, mas tem com ofazer isso direto no dano.
 	- Criar lógica para evitar que inimigos fiquem empilhados.
 
 	- Ajustar a forma como o projetil é tratado quando o player está encostado numa parede, pois ele é instantaneamente destruído.

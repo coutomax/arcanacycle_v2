@@ -1,3 +1,5 @@
+toggle		= true;
+
 data	=
 {
 	escalaX					: image_xscale,
@@ -6,7 +8,7 @@ data	=
 	hp_amount				: 0,
 	hp_max_amount			: 0,
 	dash_amount				: 0,
-	dash_max_amount			: 0,
+	dash_max_amount			: 180,
 	hp_filler_sprite		: spr_hp_filler,
 	hp_background_sprite	: spr_background_bar,
 	dash_filler_sprite		: spr_dash_filler,
@@ -29,6 +31,6 @@ function health_display()
        	var _layer_name		= layer_get_name(self.layer);
        	var _element_id		= layer_text_get_id(_layer_name, "txt_life_bar");
        	
-       	layer_text_text(_element_id, $"{global.player.data.stats.life}/{global.player.data.stats.max_life}");	
+       	layer_text_text(_element_id, $"{global.player.data.stats.life} / {global.player.data.stats.max_life}");
     }
 }

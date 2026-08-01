@@ -72,7 +72,6 @@ function text_scale(_element_id, _child, _text, _maximum_width, _maximum_height,
 function button_actions(obj, actions){
 	var _a	=
 	{
-		
 		object			: obj,
 		action			: actions,
 		obj_layer		: noone,
@@ -82,20 +81,21 @@ function button_actions(obj, actions){
 			obj_layer	= layer_get_name(self.object.layer);
 		},
 		
-		on_activate		:	function ()
+		on_activate		: function ()
 		{
 			switch (action)
 			{
 				case	"new_game":
 					_swap_layer(action, obj_layer, "ui_status_bars", ["ui_start_menu", "ui_game_over"], function () {
+						game_reset();
 						global.started  = true;
 						room_goto(0);
 					})
-				break;		
+				break;
 				
 				case	"settings":
 					_swap_layer(action, obj_layer, "ui_settings", ["ui_start_menu", "ui_pause_menu"]);
-				break;	
+				break;
 				
 				case	"exit":
 					_swap_layer(action, obj_layer, "ui_yes_no_menu_option", ["ui_start_menu", "ui_pause_menu"]);
@@ -124,7 +124,12 @@ function button_actions(obj, actions){
 				break;
 				
 				case	"no_option":
-					_swap_layer(action, obj_layer, global.last_layer, ["ui_yes_no_menu_option"]);
+					_swap_layer(action, obj_layer, global.last_layer, ["ui_yes_no_menu_option"], function () {
+						if (global.last_layer == "ui_game_over")
+						{
+							layer_set_visible("ui_status_bars", true);
+						}
+					});
 				break;
 				
 				case "resume":

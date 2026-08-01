@@ -10,7 +10,14 @@ set_title_translation   = function ()
     var _struct 	= flexpanel_node_get_struct(title);
 	var _element_id = _struct.layerElements[0].elementId;
 
-    var _translated_title   = global.dialogue_struct[$ global.active_layer].menu_title;
+    var _translated_title   = global.dialogue_struct[$ global.active_layer].menu_title
+
+    if (is_array(global.dialogue_struct[$ global.active_layer].menu_title))
+    {
+        var _random_index   = irandom_range(0, array_length(_translated_title) - 1);
+        _translated_title   = _translated_title[_random_index];
+    }
+
     var _element_text_id    = layer_text_get_id(global.active_layer, $"{global.active_layer}_title");
 
     layer_text_text(_element_text_id, _translated_title);

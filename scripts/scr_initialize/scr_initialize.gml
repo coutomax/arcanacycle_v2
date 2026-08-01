@@ -3,7 +3,7 @@
 						CRIA E INICIA TODAS AS VIARIÁVEIS GLOBAIS
 
 */
-global.language  		= 1; // 0 - pt-br, 1 - en
+global.language  		= 0; // 0 - pt-br, 1 - en
 function initialize()
 { 
     randomize();
@@ -136,6 +136,12 @@ function game_reset()
 
     array_resize(global.objects_list, 0);
     array_resize(global.drawn_cards, 0);
+
+    if (instance_exists(obj_hp_bar))
+    {
+        obj_hp_bar.sprite_index	    = spr_hp_bar;
+        obj_hp_bar.toggle           = true;
+    }
 
 	//objects destroyer
 	if (object_exists(obj_player))

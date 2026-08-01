@@ -24,24 +24,26 @@ if (!_has_player && global.started)
 	global.path_queue 		= ds_priority_create();
 }
 
-if (_has_player && global.player.data.stats.life < 0)
-{
-	global.player.data.stats.life	= 0;
-	
-	if (toggle)
-	{
-		toggle						= false;
-		obj_hp_bar.sprite_index		= spr_broken_hp_bar;
-		audio_play_sound(snd_breaking_glass, 0, false, 0.37);
-	}
-}
-
 if (global.started)
 {
 	object_cleaner();
   	path_tracker();
   	enemy_spawner();
   	roll_cards();
+}
+
+if (instance_exists(obj_player) && global.player.data.stats.life <= 0 && !global.paused)
+{
+	game_over_delay_timer++;
+
+	if (game_over_delay_timer >= ui_game_over_delay)
+	{
+		global.last_layer		= "ui_game_over";
+
+		layer_set_visible("ui_game_over", true);
+		game_over_delay_timer 	= 0;
+		global.paused			= true;		
+	}
 }
 
 update_fps++;

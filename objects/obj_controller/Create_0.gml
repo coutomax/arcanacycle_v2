@@ -1,4 +1,3 @@
-toggle		= true;
 display_w 	= display_get_width();
 display_h 	= display_get_height();
 
@@ -8,6 +7,9 @@ actual_fps  = fps_real;
 respawn_timer 	= 0;
 max_paths 		= 4;
 language        = undefined;
+
+ui_game_over_delay 		= 120;
+game_over_delay_timer 	= 0;
 
 game_set_speed(60, gamespeed_fps);
 show_debug_overlay(false);
